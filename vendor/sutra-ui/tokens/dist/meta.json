@@ -1,177 +1,177 @@
 [
   {
-    "path": "color.marigold.300",
-    "name": "--sutra-color-marigold-300",
+    "path": "color.ivory.50",
+    "name": "--sutra-color-ivory-50",
     "type": "color",
-    "value": "#ffb703",
+    "value": "#fbf8f3",
     "description": null
   },
   {
-    "path": "color.marigold.500",
-    "name": "--sutra-color-marigold-500",
+    "path": "color.ivory.100",
+    "name": "--sutra-color-ivory-100",
     "type": "color",
-    "value": "#ff8a00",
+    "value": "#f4efe6",
     "description": null
   },
   {
-    "path": "color.marigold.700",
-    "name": "--sutra-color-marigold-700",
+    "path": "color.ivory.200",
+    "name": "--sutra-color-ivory-200",
     "type": "color",
-    "value": "#c65300",
+    "value": "#ebe4d6",
     "description": null
   },
   {
-    "path": "color.marigold.800",
-    "name": "--sutra-color-marigold-800",
+    "path": "color.ivory.300",
+    "name": "--sutra-color-ivory-300",
     "type": "color",
-    "value": "#8a3b00",
+    "value": "#e0d5c4",
     "description": null
   },
   {
-    "path": "color.rani.300",
-    "name": "--sutra-color-rani-300",
+    "path": "color.ivory.400",
+    "name": "--sutra-color-ivory-400",
     "type": "color",
-    "value": "#ff7ab8",
+    "value": "#cbbfae",
     "description": null
   },
   {
-    "path": "color.rani.500",
-    "name": "--sutra-color-rani-500",
+    "path": "color.ink.700",
+    "name": "--sutra-color-ink-700",
     "type": "color",
-    "value": "#ff4d9a",
+    "value": "#2a2430",
     "description": null
   },
   {
-    "path": "color.rani.700",
-    "name": "--sutra-color-rani-700",
+    "path": "color.ink.800",
+    "name": "--sutra-color-ink-800",
     "type": "color",
-    "value": "#c40062",
+    "value": "#1b1822",
     "description": null
   },
   {
-    "path": "color.rani.800",
-    "name": "--sutra-color-rani-800",
+    "path": "color.ink.900",
+    "name": "--sutra-color-ink-900",
     "type": "color",
-    "value": "#9d124f",
+    "value": "#16141c",
     "description": null
   },
   {
-    "path": "color.peacock.300",
-    "name": "--sutra-color-peacock-300",
+    "path": "color.ink.950",
+    "name": "--sutra-color-ink-950",
     "type": "color",
-    "value": "#14d6c6",
+    "value": "#100e14",
     "description": null
   },
   {
-    "path": "color.peacock.500",
-    "name": "--sutra-color-peacock-500",
+    "path": "color.gold.300",
+    "name": "--sutra-color-gold-300",
     "type": "color",
-    "value": "#06748a",
+    "value": "#e2cfab",
     "description": null
   },
   {
-    "path": "color.peacock.700",
-    "name": "--sutra-color-peacock-700",
+    "path": "color.gold.500",
+    "name": "--sutra-color-gold-500",
     "type": "color",
-    "value": "#04586c",
+    "value": "#c4b49a",
     "description": null
   },
   {
-    "path": "color.peacock.800",
-    "name": "--sutra-color-peacock-800",
+    "path": "color.gold.700",
+    "name": "--sutra-color-gold-700",
     "type": "color",
-    "value": "#0a5570",
+    "value": "#8a7350",
     "description": null
   },
   {
-    "path": "color.turmeric.300",
-    "name": "--sutra-color-turmeric-300",
+    "path": "color.gold.800",
+    "name": "--sutra-color-gold-800",
     "type": "color",
-    "value": "#ffd15a",
+    "value": "#6e5424",
     "description": null
   },
   {
-    "path": "color.turmeric.500",
-    "name": "--sutra-color-turmeric-500",
+    "path": "color.oxblood.300",
+    "name": "--sutra-color-oxblood-300",
     "type": "color",
-    "value": "#ffc107",
+    "value": "#e4b2aa",
     "description": null
   },
   {
-    "path": "color.turmeric.700",
-    "name": "--sutra-color-turmeric-700",
+    "path": "color.oxblood.500",
+    "name": "--sutra-color-oxblood-500",
     "type": "color",
-    "value": "#7a4a00",
+    "value": "#8a3a34",
     "description": null
   },
   {
-    "path": "color.parrot.300",
-    "name": "--sutra-color-parrot-300",
+    "path": "color.oxblood.700",
+    "name": "--sutra-color-oxblood-700",
     "type": "color",
-    "value": "#9af07a",
+    "value": "#6e2c28",
     "description": null
   },
   {
-    "path": "color.parrot.500",
-    "name": "--sutra-color-parrot-500",
+    "path": "color.oxblood.800",
+    "name": "--sutra-color-oxblood-800",
     "type": "color",
-    "value": "#2ebe4a",
+    "value": "#5a2420",
     "description": null
   },
   {
-    "path": "color.parrot.700",
-    "name": "--sutra-color-parrot-700",
+    "path": "color.emerald.300",
+    "name": "--sutra-color-emerald-300",
     "type": "color",
-    "value": "#0f7a32",
+    "value": "#b7d4cc",
+    "description": null
+  },
+  {
+    "path": "color.emerald.500",
+    "name": "--sutra-color-emerald-500",
+    "type": "color",
+    "value": "#3d6b62",
+    "description": null
+  },
+  {
+    "path": "color.emerald.700",
+    "name": "--sutra-color-emerald-700",
+    "type": "color",
+    "value": "#1a4540",
+    "description": null
+  },
+  {
+    "path": "color.emerald.800",
+    "name": "--sutra-color-emerald-800",
+    "type": "color",
+    "value": "#1a4a38",
     "description": null
   },
   {
     "path": "color.indigo.100",
     "name": "--sutra-color-indigo-100",
     "type": "color",
-    "value": "#e6e0ff",
+    "value": "#e8e6f0",
     "description": null
   },
   {
     "path": "color.indigo.300",
     "name": "--sutra-color-indigo-300",
     "type": "color",
-    "value": "#cbbdff",
-    "description": null
-  },
-  {
-    "path": "color.indigo.500",
-    "name": "--sutra-color-indigo-500",
-    "type": "color",
-    "value": "#6d5bd0",
+    "value": "#d4d0e4",
     "description": null
   },
   {
     "path": "color.indigo.700",
     "name": "--sutra-color-indigo-700",
     "type": "color",
-    "value": "#3b2a86",
+    "value": "#2c2a4a",
     "description": null
   },
   {
     "path": "color.indigo.900",
     "name": "--sutra-color-indigo-900",
     "type": "color",
-    "value": "#1a0f2e",
-    "description": null
-  },
-  {
-    "path": "color.cream",
-    "name": "--sutra-color-cream",
-    "type": "color",
-    "value": "#fff6ea",
-    "description": null
-  },
-  {
-    "path": "color.ink",
-    "name": "--sutra-color-ink",
-    "type": "color",
-    "value": "#1a0f2e",
+    "value": "#1c1a2a",
     "description": null
   },
   {
@@ -192,315 +192,315 @@
     "path": "color.bg.canvas",
     "name": "--sutra-color-bg-canvas",
     "type": "color",
-    "value": "#fff3e4",
+    "value": "#f4efe6",
     "description": null
   },
   {
     "path": "color.bg.surface",
     "name": "--sutra-color-bg-surface",
     "type": "color",
-    "value": "#ffffff",
+    "value": "#fbf8f3",
     "description": null
   },
   {
     "path": "color.bg.subtle",
     "name": "--sutra-color-bg-subtle",
     "type": "color",
-    "value": "#ffe7f2",
+    "value": "#ebe4d6",
     "description": null
   },
   {
     "path": "color.bg.sunken",
     "name": "--sutra-color-bg-sunken",
     "type": "color",
-    "value": "#ffd7ae",
+    "value": "#e0d5c4",
     "description": null
   },
   {
     "path": "color.bg.inverse",
     "name": "--sutra-color-bg-inverse",
     "type": "color",
-    "value": "#1a0f2e",
+    "value": "#16141c",
     "description": null
   },
   {
     "path": "color.bg.primary",
     "name": "--sutra-color-bg-primary",
     "type": "color",
-    "value": "#06748a",
+    "value": "#16141c",
     "description": null
   },
   {
     "path": "color.bg.primary-hover",
     "name": "--sutra-color-bg-primary-hover",
     "type": "color",
-    "value": "#04586c",
+    "value": "#2a2430",
     "description": null
   },
   {
     "path": "color.bg.primary-subtle",
     "name": "--sutra-color-bg-primary-subtle",
     "type": "color",
-    "value": "#d2f7f3",
+    "value": "#e5eeea",
     "description": null
   },
   {
     "path": "color.bg.accent",
     "name": "--sutra-color-bg-accent",
     "type": "color",
-    "value": "#c40062",
+    "value": "#6e2c28",
     "description": null
   },
   {
     "path": "color.bg.accent-hover",
     "name": "--sutra-color-bg-accent-hover",
     "type": "color",
-    "value": "#9a004c",
+    "value": "#5a2420",
     "description": null
   },
   {
     "path": "color.bg.accent-subtle",
     "name": "--sutra-color-bg-accent-subtle",
     "type": "color",
-    "value": "#ffd6ec",
+    "value": "#f3e4e1",
     "description": null
   },
   {
     "path": "color.bg.danger",
     "name": "--sutra-color-bg-danger",
     "type": "color",
-    "value": "#c81e4a",
+    "value": "#6e2c28",
     "description": null
   },
   {
     "path": "color.bg.danger-hover",
     "name": "--sutra-color-bg-danger-hover",
     "type": "color",
-    "value": "#9f1239",
+    "value": "#5a2420",
     "description": null
   },
   {
     "path": "color.bg.danger-subtle",
     "name": "--sutra-color-bg-danger-subtle",
     "type": "color",
-    "value": "#ffe0e6",
+    "value": "#f6e4e2",
     "description": null
   },
   {
     "path": "color.bg.success",
     "name": "--sutra-color-bg-success",
     "type": "color",
-    "value": "#0f7a32",
+    "value": "#1a4a38",
     "description": null
   },
   {
     "path": "color.bg.success-subtle",
     "name": "--sutra-color-bg-success-subtle",
     "type": "color",
-    "value": "#ddf8d4",
+    "value": "#e4efe8",
     "description": null
   },
   {
     "path": "color.bg.warning-subtle",
     "name": "--sutra-color-bg-warning-subtle",
     "type": "color",
-    "value": "#fff3c4",
+    "value": "#f3ead6",
     "description": null
   },
   {
     "path": "color.bg.info-subtle",
     "name": "--sutra-color-bg-info-subtle",
     "type": "color",
-    "value": "#e6e0ff",
+    "value": "#e8e6f0",
     "description": null
   },
   {
     "path": "color.fg.default",
     "name": "--sutra-color-fg-default",
     "type": "color",
-    "value": "#1a0f2e",
+    "value": "#16141c",
     "description": null
   },
   {
     "path": "color.fg.muted",
     "name": "--sutra-color-fg-muted",
     "type": "color",
-    "value": "#5e3a55",
+    "value": "#5c5348",
     "description": null
   },
   {
     "path": "color.fg.on-primary",
     "name": "--sutra-color-fg-on-primary",
     "type": "color",
-    "value": "#ffffff",
+    "value": "#fbf8f3",
     "description": null
   },
   {
     "path": "color.fg.on-accent",
     "name": "--sutra-color-fg-on-accent",
     "type": "color",
-    "value": "#ffffff",
+    "value": "#fbf8f3",
     "description": null
   },
   {
     "path": "color.fg.on-danger",
     "name": "--sutra-color-fg-on-danger",
     "type": "color",
-    "value": "#ffffff",
+    "value": "#fbf8f3",
     "description": null
   },
   {
     "path": "color.fg.on-success",
     "name": "--sutra-color-fg-on-success",
     "type": "color",
-    "value": "#ffffff",
+    "value": "#fbf8f3",
     "description": null
   },
   {
     "path": "color.fg.on-inverse",
     "name": "--sutra-color-fg-on-inverse",
     "type": "color",
-    "value": "#fff3e4",
+    "value": "#f4efe6",
     "description": null
   },
   {
     "path": "color.fg.link",
     "name": "--sutra-color-fg-link",
     "type": "color",
-    "value": "#0b5f86",
+    "value": "#1e4a44",
     "description": null
   },
   {
     "path": "color.fg.primary",
     "name": "--sutra-color-fg-primary",
     "type": "color",
-    "value": "#0a5570",
+    "value": "#1a4540",
     "description": null
   },
   {
     "path": "color.fg.accent",
     "name": "--sutra-color-fg-accent",
     "type": "color",
-    "value": "#9d124f",
+    "value": "#6e2c28",
     "description": null
   },
   {
     "path": "color.fg.danger",
     "name": "--sutra-color-fg-danger",
     "type": "color",
-    "value": "#9f1239",
+    "value": "#6e2c28",
     "description": null
   },
   {
     "path": "color.fg.success",
     "name": "--sutra-color-fg-success",
     "type": "color",
-    "value": "#0d6b28",
+    "value": "#1a4a38",
     "description": null
   },
   {
     "path": "color.fg.warning",
     "name": "--sutra-color-fg-warning",
     "type": "color",
-    "value": "#7a4a00",
+    "value": "#6e5424",
     "description": null
   },
   {
     "path": "color.fg.info",
     "name": "--sutra-color-fg-info",
     "type": "color",
-    "value": "#3b2a86",
+    "value": "#2c2a4a",
     "description": null
   },
   {
     "path": "color.border.default",
     "name": "--sutra-color-border-default",
     "type": "color",
-    "value": "#7a3e62",
+    "value": "#8a7350",
     "description": null
   },
   {
     "path": "color.border.strong",
     "name": "--sutra-color-border-strong",
     "type": "color",
-    "value": "#5e3a55",
+    "value": "#5c5348",
     "description": null
   },
   {
     "path": "color.border.primary",
     "name": "--sutra-color-border-primary",
     "type": "color",
-    "value": "#06748a",
+    "value": "#1a4540",
     "description": null
   },
   {
     "path": "color.focus.ring",
     "name": "--sutra-color-focus-ring",
     "type": "color",
-    "value": "#c40062",
+    "value": "#6e2c28",
     "description": null
   },
   {
     "path": "color.thread.start",
     "name": "--sutra-color-thread-start",
     "type": "color",
-    "value": "#c65300",
+    "value": "#8a7350",
     "description": null
   },
   {
     "path": "color.thread.end",
     "name": "--sutra-color-thread-end",
     "type": "color",
-    "value": "#06748a",
+    "value": "#1a4540",
     "description": null
   },
   {
-    "path": "gradient.festival",
-    "name": "--sutra-gradient-festival",
+    "path": "gradient.rule",
+    "name": "--sutra-gradient-rule",
     "type": "other",
-    "value": "linear-gradient(115deg, #ff8a00 0%, #ff2d8a 46%, #06748a 100%)",
+    "value": "linear-gradient(90deg, transparent, #8a7350 18%, #8a7350 82%, transparent)",
     "description": null
   },
   {
-    "path": "gradient.mesh",
-    "name": "--sutra-gradient-mesh",
+    "path": "gradient.veil",
+    "name": "--sutra-gradient-veil",
     "type": "other",
-    "value": "radial-gradient(520px 260px at 8% -10%, #ffd0a6 0%, transparent 62%), radial-gradient(460px 280px at 100% 0%, #ffc2e2 0%, transparent 58%), radial-gradient(380px 220px at 78% 110%, #c9f6f1 0%, transparent 55%)",
+    "value": "radial-gradient(680px 320px at 100% 0%, rgba(138, 115, 80, 0.16), transparent 62%)",
     "description": null
   },
   {
-    "path": "pattern.rangoli",
-    "name": "--sutra-pattern-rangoli",
+    "path": "pattern.kalamkari",
+    "name": "--sutra-pattern-kalamkari",
     "type": "other",
-    "value": "radial-gradient(circle at 12px 12px, rgba(196, 0, 98, 0.28) 2.2px, transparent 2.8px)",
-    "description": "Optional decorative dot field. Do not place body text on a stronger version of this pattern."
+    "value": "repeating-linear-gradient(90deg, transparent 0 23px, rgba(138, 115, 80, 0.45) 23px 24px), repeating-linear-gradient(0deg, transparent 0 23px, rgba(138, 115, 80, 0.45) 23px 24px)",
+    "description": "Fine line grid, used as a margin ornament. Keep it off body text."
   },
   {
     "path": "pattern.blockprint",
     "name": "--sutra-pattern-blockprint",
     "type": "other",
-    "value": "repeating-linear-gradient(135deg, transparent 0 10px, rgba(198, 83, 0, 0.16) 10px 12px)",
-    "description": "Optional block-print stripe. Decorative only."
+    "value": "repeating-linear-gradient(135deg, transparent 0 15px, rgba(110, 44, 40, 0.28) 15px 16px)",
+    "description": "A single hairline repeat, like a block-print edge."
   },
   {
     "path": "shadow.sm",
     "name": "--sutra-shadow-sm",
     "type": "shadow",
-    "value": "4px 4px 0px 0px #ff8a00",
+    "value": "0px 1px 1px 0px rgba(22, 20, 28, 0.05), 0px 8px 20px 0px rgba(22, 20, 28, 0.04)",
     "description": null
   },
   {
     "path": "shadow.md",
     "name": "--sutra-shadow-md",
     "type": "shadow",
-    "value": "6px 6px 0px 0px #c40062",
+    "value": "0px 1px 2px 0px rgba(22, 20, 28, 0.05), 0px 16px 40px 0px rgba(22, 20, 28, 0.06)",
     "description": null
   },
   {
     "path": "shadow.lg",
     "name": "--sutra-shadow-lg",
     "type": "shadow",
-    "value": "10px 10px 0px 0px #06748a",
+    "value": "0px 2px 4px 0px rgba(22, 20, 28, 0.04), 0px 28px 64px 0px rgba(22, 20, 28, 0.08)",
     "description": null
   },
   {
@@ -514,8 +514,8 @@
     "path": "font.family.display",
     "name": "--sutra-font-family-display",
     "type": "fontFamily",
-    "value": "\"Baloo 2\", \"Noto Sans Devanagari\", Inter, sans-serif",
-    "description": "Baloo 2 for expressive Latin display. Devanagari falls through to Noto Sans Devanagari. Both are SIL Open Font License."
+    "value": "Fraunces, \"Noto Sans Devanagari\", \"Iowan Old Style\", Palatino, serif",
+    "description": "Fraunces for editorial display. Devanagari falls through to Noto Sans Devanagari. Both are SIL Open Font License."
   },
   {
     "path": "font.family.mono",
@@ -605,14 +605,14 @@
     "path": "font.size.4xl",
     "name": "--sutra-font-size-4xl",
     "type": "dimension",
-    "value": "3rem",
+    "value": "3.25rem",
     "description": null
   },
   {
     "path": "font.size.display",
     "name": "--sutra-font-size-display",
     "type": "dimension",
-    "value": "4rem",
+    "value": "4.5rem",
     "description": null
   },
   {
@@ -633,49 +633,49 @@
     "path": "font.line.md",
     "name": "--sutra-font-line-md",
     "type": "dimension",
-    "value": "1.5rem",
+    "value": "1.55rem",
     "description": null
   },
   {
     "path": "font.line.lg",
     "name": "--sutra-font-line-lg",
     "type": "dimension",
-    "value": "1.75rem",
+    "value": "1.7rem",
     "description": null
   },
   {
     "path": "font.line.xl",
     "name": "--sutra-font-line-xl",
     "type": "dimension",
-    "value": "1.875rem",
+    "value": "1.8rem",
     "description": null
   },
   {
     "path": "font.line.2xl",
     "name": "--sutra-font-line-2xl",
     "type": "dimension",
-    "value": "2.25rem",
+    "value": "2.15rem",
     "description": null
   },
   {
     "path": "font.line.3xl",
     "name": "--sutra-font-line-3xl",
     "type": "dimension",
-    "value": "2.75rem",
+    "value": "2.7rem",
     "description": null
   },
   {
     "path": "font.line.4xl",
     "name": "--sutra-font-line-4xl",
     "type": "dimension",
-    "value": "3.5rem",
+    "value": "3.6rem",
     "description": null
   },
   {
     "path": "font.line.display",
     "name": "--sutra-font-line-display",
     "type": "dimension",
-    "value": "4.5rem",
+    "value": "4.9rem",
     "description": null
   },
   {
@@ -773,28 +773,28 @@
     "path": "radius.sm",
     "name": "--sutra-radius-sm",
     "type": "dimension",
-    "value": "12px",
+    "value": "2px",
     "description": null
   },
   {
     "path": "radius.md",
     "name": "--sutra-radius-md",
     "type": "dimension",
-    "value": "18px",
+    "value": "4px",
     "description": null
   },
   {
     "path": "radius.lg",
     "name": "--sutra-radius-lg",
     "type": "dimension",
-    "value": "28px",
+    "value": "8px",
     "description": null
   },
   {
     "path": "radius.xl",
     "name": "--sutra-radius-xl",
     "type": "dimension",
-    "value": "40px",
+    "value": "12px",
     "description": null
   },
   {
@@ -808,35 +808,35 @@
     "path": "motion.duration.fast",
     "name": "--sutra-motion-duration-fast",
     "type": "duration",
-    "value": "160ms",
+    "value": "180ms",
     "description": null
   },
   {
     "path": "motion.duration.normal",
     "name": "--sutra-motion-duration-normal",
     "type": "duration",
-    "value": "280ms",
+    "value": "420ms",
     "description": null
   },
   {
     "path": "motion.duration.slow",
     "name": "--sutra-motion-duration-slow",
     "type": "duration",
-    "value": "460ms",
+    "value": "780ms",
     "description": null
   },
   {
     "path": "motion.easing.standard",
     "name": "--sutra-motion-easing-standard",
     "type": "cubicBezier",
-    "value": "cubic-bezier(0.34, 1.4, 0.64, 1)",
+    "value": "cubic-bezier(0.22, 1, 0.36, 1)",
     "description": null
   },
   {
     "path": "motion.easing.emphasis",
     "name": "--sutra-motion-easing-emphasis",
     "type": "cubicBezier",
-    "value": "cubic-bezier(0.22, 1.7, 0.36, 1)",
+    "value": "cubic-bezier(0.65, 0, 0.35, 1)",
     "description": null
   }
 ]

@@ -4,6 +4,16 @@ import Script from "next/script";
 import { themeInitScript } from "@sutra-ui/react/theme-script";
 import { Providers } from "@/components/Providers";
 import { SITE_NAME, absoluteUrl, pageUrl } from "@/lib/site";
+import "@fontsource/fraunces/500.css";
+import "@fontsource/fraunces/600.css";
+import "@fontsource/inter/400.css";
+import "@fontsource/inter/500.css";
+import "@fontsource/inter/600.css";
+import "@fontsource/noto-sans-devanagari/400.css";
+import "@fontsource/noto-sans-devanagari/500.css";
+import "@fontsource/noto-sans-devanagari/600.css";
+import "@fontsource/ibm-plex-mono/400.css";
+import "@fontsource/ibm-plex-mono/500.css";
 import "@sutra-ui/react/styles.css";
 import "./globals.css";
 

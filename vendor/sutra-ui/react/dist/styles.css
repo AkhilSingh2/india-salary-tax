@@ -3,80 +3,80 @@
 :root,
 [data-theme="light"] {
   color-scheme: light;
-  --sutra-color-marigold-300: #ffb703;
-  --sutra-color-marigold-500: #ff8a00;
-  --sutra-color-marigold-700: #c65300;
-  --sutra-color-marigold-800: #8a3b00;
-  --sutra-color-rani-300: #ff7ab8;
-  --sutra-color-rani-500: #ff4d9a;
-  --sutra-color-rani-700: #c40062;
-  --sutra-color-rani-800: #9d124f;
-  --sutra-color-peacock-300: #14d6c6;
-  --sutra-color-peacock-500: #06748a;
-  --sutra-color-peacock-700: #04586c;
-  --sutra-color-peacock-800: #0a5570;
-  --sutra-color-turmeric-300: #ffd15a;
-  --sutra-color-turmeric-500: #ffc107;
-  --sutra-color-turmeric-700: #7a4a00;
-  --sutra-color-parrot-300: #9af07a;
-  --sutra-color-parrot-500: #2ebe4a;
-  --sutra-color-parrot-700: #0f7a32;
-  --sutra-color-indigo-100: #e6e0ff;
-  --sutra-color-indigo-300: #cbbdff;
-  --sutra-color-indigo-500: #6d5bd0;
-  --sutra-color-indigo-700: #3b2a86;
-  --sutra-color-indigo-900: #1a0f2e;
-  --sutra-color-cream: #fff6ea;
-  --sutra-color-ink: #1a0f2e;
+  --sutra-color-ivory-50: #fbf8f3;
+  --sutra-color-ivory-100: #f4efe6;
+  --sutra-color-ivory-200: #ebe4d6;
+  --sutra-color-ivory-300: #e0d5c4;
+  --sutra-color-ivory-400: #cbbfae;
+  --sutra-color-ink-700: #2a2430;
+  --sutra-color-ink-800: #1b1822;
+  --sutra-color-ink-900: #16141c;
+  --sutra-color-ink-950: #100e14;
+  --sutra-color-gold-300: #e2cfab;
+  --sutra-color-gold-500: #c4b49a;
+  --sutra-color-gold-700: #8a7350;
+  --sutra-color-gold-800: #6e5424;
+  --sutra-color-oxblood-300: #e4b2aa;
+  --sutra-color-oxblood-500: #8a3a34;
+  --sutra-color-oxblood-700: #6e2c28;
+  --sutra-color-oxblood-800: #5a2420;
+  --sutra-color-emerald-300: #b7d4cc;
+  --sutra-color-emerald-500: #3d6b62;
+  --sutra-color-emerald-700: #1a4540;
+  --sutra-color-emerald-800: #1a4a38;
+  --sutra-color-indigo-100: #e8e6f0;
+  --sutra-color-indigo-300: #d4d0e4;
+  --sutra-color-indigo-700: #2c2a4a;
+  --sutra-color-indigo-900: #1c1a2a;
   --sutra-color-white: #ffffff;
   --sutra-color-black: #000000;
-  --sutra-color-bg-canvas: #fff3e4;
-  --sutra-color-bg-surface: #ffffff;
-  --sutra-color-bg-subtle: #ffe7f2;
-  --sutra-color-bg-sunken: #ffd7ae;
-  --sutra-color-bg-inverse: #1a0f2e;
-  --sutra-color-bg-primary: #06748a;
-  --sutra-color-bg-primary-hover: #04586c;
-  --sutra-color-bg-primary-subtle: #d2f7f3;
-  --sutra-color-bg-accent: #c40062;
-  --sutra-color-bg-accent-hover: #9a004c;
-  --sutra-color-bg-accent-subtle: #ffd6ec;
-  --sutra-color-bg-danger: #c81e4a;
-  --sutra-color-bg-danger-hover: #9f1239;
-  --sutra-color-bg-danger-subtle: #ffe0e6;
-  --sutra-color-bg-success: #0f7a32;
-  --sutra-color-bg-success-subtle: #ddf8d4;
-  --sutra-color-bg-warning-subtle: #fff3c4;
-  --sutra-color-bg-info-subtle: #e6e0ff;
-  --sutra-color-fg-default: #1a0f2e;
-  --sutra-color-fg-muted: #5e3a55;
-  --sutra-color-fg-on-primary: #ffffff;
-  --sutra-color-fg-on-accent: #ffffff;
-  --sutra-color-fg-on-danger: #ffffff;
-  --sutra-color-fg-on-success: #ffffff;
-  --sutra-color-fg-on-inverse: #fff3e4;
-  --sutra-color-fg-link: #0b5f86;
-  --sutra-color-fg-primary: #0a5570;
-  --sutra-color-fg-accent: #9d124f;
-  --sutra-color-fg-danger: #9f1239;
-  --sutra-color-fg-success: #0d6b28;
-  --sutra-color-fg-warning: #7a4a00;
-  --sutra-color-fg-info: #3b2a86;
-  --sutra-color-border-default: #7a3e62;
-  --sutra-color-border-strong: #5e3a55;
-  --sutra-color-border-primary: #06748a;
-  --sutra-color-focus-ring: #c40062;
-  --sutra-color-thread-start: #c65300;
-  --sutra-color-thread-end: #06748a;
-  --sutra-gradient-festival: linear-gradient(115deg, #ff8a00 0%, #ff2d8a 46%, #06748a 100%);
-  --sutra-gradient-mesh: radial-gradient(520px 260px at 8% -10%, #ffd0a6 0%, transparent 62%), radial-gradient(460px 280px at 100% 0%, #ffc2e2 0%, transparent 58%), radial-gradient(380px 220px at 78% 110%, #c9f6f1 0%, transparent 55%);
-  --sutra-pattern-rangoli: radial-gradient(circle at 12px 12px, rgba(196, 0, 98, 0.28) 2.2px, transparent 2.8px);
-  --sutra-pattern-blockprint: repeating-linear-gradient(135deg, transparent 0 10px, rgba(198, 83, 0, 0.16) 10px 12px);
-  --sutra-shadow-sm: 4px 4px 0px 0px #ff8a00;
-  --sutra-shadow-md: 6px 6px 0px 0px #c40062;
-  --sutra-shadow-lg: 10px 10px 0px 0px #06748a;
+  --sutra-color-bg-canvas: #f4efe6;
+  --sutra-color-bg-surface: #fbf8f3;
+  --sutra-color-bg-subtle: #ebe4d6;
+  --sutra-color-bg-sunken: #e0d5c4;
+  --sutra-color-bg-inverse: #16141c;
+  --sutra-color-bg-primary: #16141c;
+  --sutra-color-bg-primary-hover: #2a2430;
+  --sutra-color-bg-primary-subtle: #e5eeea;
+  --sutra-color-bg-accent: #6e2c28;
+  --sutra-color-bg-accent-hover: #5a2420;
+  --sutra-color-bg-accent-subtle: #f3e4e1;
+  --sutra-color-bg-danger: #6e2c28;
+  --sutra-color-bg-danger-hover: #5a2420;
+  --sutra-color-bg-danger-subtle: #f6e4e2;
+  --sutra-color-bg-success: #1a4a38;
+  --sutra-color-bg-success-subtle: #e4efe8;
+  --sutra-color-bg-warning-subtle: #f3ead6;
+  --sutra-color-bg-info-subtle: #e8e6f0;
+  --sutra-color-fg-default: #16141c;
+  --sutra-color-fg-muted: #5c5348;
+  --sutra-color-fg-on-primary: #fbf8f3;
+  --sutra-color-fg-on-accent: #fbf8f3;
+  --sutra-color-fg-on-danger: #fbf8f3;
+  --sutra-color-fg-on-success: #fbf8f3;
+  --sutra-color-fg-on-inverse: #f4efe6;
+  --sutra-color-fg-link: #1e4a44;
+  --sutra-color-fg-primary: #1a4540;
+  --sutra-color-fg-accent: #6e2c28;
+  --sutra-color-fg-danger: #6e2c28;
+  --sutra-color-fg-success: #1a4a38;
+  --sutra-color-fg-warning: #6e5424;
+  --sutra-color-fg-info: #2c2a4a;
+  --sutra-color-border-default: #8a7350;
+  --sutra-color-border-strong: #5c5348;
+  --sutra-color-border-primary: #1a4540;
+  --sutra-color-focus-ring: #6e2c28;
+  --sutra-color-thread-start: #8a7350;
+  --sutra-color-thread-end: #1a4540;
+  --sutra-gradient-rule: linear-gradient(90deg, transparent, #8a7350 18%, #8a7350 82%, transparent);
+  --sutra-gradient-veil: radial-gradient(680px 320px at 100% 0%, rgba(138, 115, 80, 0.16), transparent 62%);
+  --sutra-pattern-kalamkari: repeating-linear-gradient(90deg, transparent 0 23px, rgba(138, 115, 80, 0.45) 23px 24px), repeating-linear-gradient(0deg, transparent 0 23px, rgba(138, 115, 80, 0.45) 23px 24px);
+  --sutra-pattern-blockprint: repeating-linear-gradient(135deg, transparent 0 15px, rgba(110, 44, 40, 0.28) 15px 16px);
+  --sutra-shadow-sm: 0px 1px 1px 0px rgba(22, 20, 28, 0.05), 0px 8px 20px 0px rgba(22, 20, 28, 0.04);
+  --sutra-shadow-md: 0px 1px 2px 0px rgba(22, 20, 28, 0.05), 0px 16px 40px 0px rgba(22, 20, 28, 0.06);
+  --sutra-shadow-lg: 0px 2px 4px 0px rgba(22, 20, 28, 0.04), 0px 28px 64px 0px rgba(22, 20, 28, 0.08);
   --sutra-font-family-sans: Inter, "Noto Sans Devanagari", "Nirmala UI", Mangal, sans-serif;
-  --sutra-font-family-display: "Baloo 2", "Noto Sans Devanagari", Inter, sans-serif;
+  --sutra-font-family-display: Fraunces, "Noto Sans Devanagari", "Iowan Old Style", Palatino, serif;
   --sutra-font-family-mono: "IBM Plex Mono", "Noto Sans Mono", ui-monospace, monospace;
   --sutra-font-weight-regular: 400;
   --sutra-font-weight-medium: 500;
@@ -89,17 +89,17 @@
   --sutra-font-size-xl: 1.375rem;
   --sutra-font-size-2xl: 1.75rem;
   --sutra-font-size-3xl: 2.25rem;
-  --sutra-font-size-4xl: 3rem;
-  --sutra-font-size-display: 4rem;
+  --sutra-font-size-4xl: 3.25rem;
+  --sutra-font-size-display: 4.5rem;
   --sutra-font-line-xs: 1.125rem;
   --sutra-font-line-sm: 1.375rem;
-  --sutra-font-line-md: 1.5rem;
-  --sutra-font-line-lg: 1.75rem;
-  --sutra-font-line-xl: 1.875rem;
-  --sutra-font-line-2xl: 2.25rem;
-  --sutra-font-line-3xl: 2.75rem;
-  --sutra-font-line-4xl: 3.5rem;
-  --sutra-font-line-display: 4.5rem;
+  --sutra-font-line-md: 1.55rem;
+  --sutra-font-line-lg: 1.7rem;
+  --sutra-font-line-xl: 1.8rem;
+  --sutra-font-line-2xl: 2.15rem;
+  --sutra-font-line-3xl: 2.7rem;
+  --sutra-font-line-4xl: 3.6rem;
+  --sutra-font-line-display: 4.9rem;
   --sutra-space-0: 0px;
   --sutra-space-1: 4px;
   --sutra-space-2: 8px;
@@ -113,68 +113,71 @@
   --sutra-space-16: 64px;
   --sutra-space-20: 80px;
   --sutra-radius-none: 0px;
-  --sutra-radius-sm: 12px;
-  --sutra-radius-md: 18px;
-  --sutra-radius-lg: 28px;
-  --sutra-radius-xl: 40px;
+  --sutra-radius-sm: 2px;
+  --sutra-radius-md: 4px;
+  --sutra-radius-lg: 8px;
+  --sutra-radius-xl: 12px;
   --sutra-radius-full: 999px;
-  --sutra-motion-duration-fast: 160ms;
-  --sutra-motion-duration-normal: 280ms;
-  --sutra-motion-duration-slow: 460ms;
-  --sutra-motion-easing-standard: cubic-bezier(0.34, 1.4, 0.64, 1);
-  --sutra-motion-easing-emphasis: cubic-bezier(0.22, 1.7, 0.36, 1);
+  --sutra-motion-duration-fast: 180ms;
+  --sutra-motion-duration-normal: 420ms;
+  --sutra-motion-duration-slow: 780ms;
+  --sutra-motion-easing-standard: cubic-bezier(0.22, 1, 0.36, 1);
+  --sutra-motion-easing-emphasis: cubic-bezier(0.65, 0, 0.35, 1);
 }
 
 [data-theme="dark"] {
   color-scheme: dark;
-  --sutra-color-bg-canvas: #160b2e;
-  --sutra-color-bg-surface: #261246;
-  --sutra-color-bg-subtle: #35185c;
-  --sutra-color-bg-sunken: #0e071c;
-  --sutra-color-bg-inverse: #fff6ea;
-  --sutra-color-bg-primary: #14d6c6;
-  --sutra-color-bg-primary-hover: #00c2b3;
-  --sutra-color-bg-primary-subtle: #083844;
-  --sutra-color-bg-accent: #ff4d9a;
-  --sutra-color-bg-accent-hover: #ff2d8a;
-  --sutra-color-bg-accent-subtle: #4a1238;
-  --sutra-color-bg-danger: #be123c;
-  --sutra-color-bg-danger-subtle: #4a1224;
-  --sutra-color-bg-success-subtle: #0d3320;
-  --sutra-color-bg-warning-subtle: #3a2808;
-  --sutra-color-bg-info-subtle: #2a1860;
-  --sutra-color-fg-default: #fff6ea;
-  --sutra-color-fg-muted: #f3c9a4;
-  --sutra-color-fg-on-primary: #102018;
-  --sutra-color-fg-on-accent: #1a0f2e;
-  --sutra-color-fg-on-danger: #fff6ea;
-  --sutra-color-fg-on-success: #fff6ea;
-  --sutra-color-fg-on-inverse: #160b2e;
-  --sutra-color-fg-link: #7ef0ea;
-  --sutra-color-fg-primary: #7ef0ea;
-  --sutra-color-fg-accent: #ff8ac4;
-  --sutra-color-fg-danger: #ffb0c4;
-  --sutra-color-fg-success: #9af07a;
-  --sutra-color-fg-warning: #ffd15a;
-  --sutra-color-fg-info: #cbbdff;
-  --sutra-color-border-default: #c084fc;
-  --sutra-color-border-strong: #f9a8d4;
-  --sutra-color-border-primary: #7ef0ea;
-  --sutra-color-focus-ring: #ff7ab8;
-  --sutra-color-thread-start: #ffb703;
-  --sutra-color-thread-end: #3dffe4;
-  --sutra-gradient-festival: linear-gradient(115deg, #ffb703 0%, #ff4d9a 48%, #14d6c6 100%);
-  --sutra-gradient-mesh: radial-gradient(480px 240px at 0% 0%, #5a1848 0%, transparent 62%), radial-gradient(420px 260px at 100% 8%, #0c4a4a 0%, transparent 58%), radial-gradient(360px 200px at 70% 100%, #3a1d78 0%, transparent 55%);
-  --sutra-pattern-rangoli: radial-gradient(circle at 12px 12px, rgba(255, 77, 154, 0.45) 2.2px, transparent 2.8px);
-  --sutra-pattern-blockprint: repeating-linear-gradient(135deg, transparent 0 10px, rgba(255, 183, 3, 0.22) 10px 12px);
-  --sutra-shadow-sm: 4px 4px 0px 0px #ffb703;
-  --sutra-shadow-md: 6px 6px 0px 0px #ff4d9a;
-  --sutra-shadow-lg: 10px 10px 0px 0px #14d6c6;
+  --sutra-color-bg-canvas: #100e14;
+  --sutra-color-bg-surface: #1b1822;
+  --sutra-color-bg-subtle: #26222e;
+  --sutra-color-bg-sunken: #0b090e;
+  --sutra-color-bg-inverse: #f4efe6;
+  --sutra-color-bg-primary: #f4efe6;
+  --sutra-color-bg-primary-hover: #fbf8f3;
+  --sutra-color-bg-primary-subtle: #142824;
+  --sutra-color-bg-accent: #8a3a34;
+  --sutra-color-bg-accent-hover: #a24a42;
+  --sutra-color-bg-accent-subtle: #2a1818;
+  --sutra-color-bg-danger: #8a3a34;
+  --sutra-color-bg-danger-hover: #a24a42;
+  --sutra-color-bg-danger-subtle: #2a1616;
+  --sutra-color-bg-success: #2f6a56;
+  --sutra-color-bg-success-subtle: #12241c;
+  --sutra-color-bg-warning-subtle: #2a2416;
+  --sutra-color-bg-info-subtle: #1c1a2a;
+  --sutra-color-fg-default: #f4efe6;
+  --sutra-color-fg-muted: #cbbfae;
+  --sutra-color-fg-on-primary: #100e14;
+  --sutra-color-fg-on-accent: #f4efe6;
+  --sutra-color-fg-on-danger: #f4efe6;
+  --sutra-color-fg-on-success: #f4efe6;
+  --sutra-color-fg-on-inverse: #100e14;
+  --sutra-color-fg-link: #b7d4cc;
+  --sutra-color-fg-primary: #b7d4cc;
+  --sutra-color-fg-accent: #e4b2aa;
+  --sutra-color-fg-danger: #e4b2aa;
+  --sutra-color-fg-success: #b7d4c4;
+  --sutra-color-fg-warning: #e2cfab;
+  --sutra-color-fg-info: #d4d0e4;
+  --sutra-color-border-default: #c4b49a;
+  --sutra-color-border-strong: #e2cfab;
+  --sutra-color-border-primary: #b7d4cc;
+  --sutra-color-focus-ring: #e2cfab;
+  --sutra-color-thread-start: #e2cfab;
+  --sutra-color-thread-end: #b7d4cc;
+  --sutra-gradient-rule: linear-gradient(90deg, transparent, #c4b49a 18%, #c4b49a 82%, transparent);
+  --sutra-gradient-veil: radial-gradient(640px 300px at 100% 0%, rgba(196, 180, 154, 0.12), transparent 60%);
+  --sutra-pattern-kalamkari: repeating-linear-gradient(90deg, transparent 0 23px, rgba(196, 180, 154, 0.28) 23px 24px), repeating-linear-gradient(0deg, transparent 0 23px, rgba(196, 180, 154, 0.28) 23px 24px);
+  --sutra-pattern-blockprint: repeating-linear-gradient(135deg, transparent 0 15px, rgba(228, 178, 170, 0.2) 15px 16px);
+  --sutra-shadow-sm: 0px 1px 2px 0px rgba(0, 0, 0, 0.35), 0px 10px 24px 0px rgba(0, 0, 0, 0.28);
+  --sutra-shadow-md: 0px 1px 2px 0px rgba(0, 0, 0, 0.3), 0px 18px 40px 0px rgba(0, 0, 0, 0.4);
+  --sutra-shadow-lg: 0px 2px 4px 0px rgba(0, 0, 0, 0.35), 0px 32px 64px 0px rgba(0, 0, 0, 0.5);
 }
 
 [data-theme="high-contrast"] {
   color-scheme: light;
   --sutra-color-bg-canvas: #ffffff;
+  --sutra-color-bg-surface: #ffffff;
   --sutra-color-bg-subtle: #eeeeee;
   --sutra-color-bg-sunken: #e0e0e0;
   --sutra-color-bg-inverse: #000000;
@@ -193,6 +196,10 @@
   --sutra-color-bg-info-subtle: #e8eeff;
   --sutra-color-fg-default: #000000;
   --sutra-color-fg-muted: #1a1a1a;
+  --sutra-color-fg-on-primary: #ffffff;
+  --sutra-color-fg-on-accent: #ffffff;
+  --sutra-color-fg-on-danger: #ffffff;
+  --sutra-color-fg-on-success: #ffffff;
   --sutra-color-fg-on-inverse: #ffffff;
   --sutra-color-fg-link: #0028a0;
   --sutra-color-fg-primary: #003d34;
@@ -207,9 +214,9 @@
   --sutra-color-focus-ring: #000000;
   --sutra-color-thread-start: #5c3a00;
   --sutra-color-thread-end: #003d34;
-  --sutra-gradient-festival: linear-gradient(90deg, #5c3a00, #003d34);
-  --sutra-gradient-mesh: none;
-  --sutra-pattern-rangoli: none;
+  --sutra-gradient-rule: linear-gradient(90deg, transparent, #000000 20%, #000000 80%, transparent);
+  --sutra-gradient-veil: none;
+  --sutra-pattern-kalamkari: none;
   --sutra-pattern-blockprint: none;
   --sutra-shadow-sm: 3px 3px 0px 0px #000000;
   --sutra-shadow-md: 5px 5px 0px 0px #000000;
@@ -220,49 +227,51 @@
   :root:not([data-theme]),
   :root[data-theme="system"] {
     color-scheme: dark;
-  --sutra-color-bg-canvas: #160b2e;
-  --sutra-color-bg-surface: #261246;
-  --sutra-color-bg-subtle: #35185c;
-  --sutra-color-bg-sunken: #0e071c;
-  --sutra-color-bg-inverse: #fff6ea;
-  --sutra-color-bg-primary: #14d6c6;
-  --sutra-color-bg-primary-hover: #00c2b3;
-  --sutra-color-bg-primary-subtle: #083844;
-  --sutra-color-bg-accent: #ff4d9a;
-  --sutra-color-bg-accent-hover: #ff2d8a;
-  --sutra-color-bg-accent-subtle: #4a1238;
-  --sutra-color-bg-danger: #be123c;
-  --sutra-color-bg-danger-subtle: #4a1224;
-  --sutra-color-bg-success-subtle: #0d3320;
-  --sutra-color-bg-warning-subtle: #3a2808;
-  --sutra-color-bg-info-subtle: #2a1860;
-  --sutra-color-fg-default: #fff6ea;
-  --sutra-color-fg-muted: #f3c9a4;
-  --sutra-color-fg-on-primary: #102018;
-  --sutra-color-fg-on-accent: #1a0f2e;
-  --sutra-color-fg-on-danger: #fff6ea;
-  --sutra-color-fg-on-success: #fff6ea;
-  --sutra-color-fg-on-inverse: #160b2e;
-  --sutra-color-fg-link: #7ef0ea;
-  --sutra-color-fg-primary: #7ef0ea;
-  --sutra-color-fg-accent: #ff8ac4;
-  --sutra-color-fg-danger: #ffb0c4;
-  --sutra-color-fg-success: #9af07a;
-  --sutra-color-fg-warning: #ffd15a;
-  --sutra-color-fg-info: #cbbdff;
-  --sutra-color-border-default: #c084fc;
-  --sutra-color-border-strong: #f9a8d4;
-  --sutra-color-border-primary: #7ef0ea;
-  --sutra-color-focus-ring: #ff7ab8;
-  --sutra-color-thread-start: #ffb703;
-  --sutra-color-thread-end: #3dffe4;
-  --sutra-gradient-festival: linear-gradient(115deg, #ffb703 0%, #ff4d9a 48%, #14d6c6 100%);
-  --sutra-gradient-mesh: radial-gradient(480px 240px at 0% 0%, #5a1848 0%, transparent 62%), radial-gradient(420px 260px at 100% 8%, #0c4a4a 0%, transparent 58%), radial-gradient(360px 200px at 70% 100%, #3a1d78 0%, transparent 55%);
-  --sutra-pattern-rangoli: radial-gradient(circle at 12px 12px, rgba(255, 77, 154, 0.45) 2.2px, transparent 2.8px);
-  --sutra-pattern-blockprint: repeating-linear-gradient(135deg, transparent 0 10px, rgba(255, 183, 3, 0.22) 10px 12px);
-  --sutra-shadow-sm: 4px 4px 0px 0px #ffb703;
-  --sutra-shadow-md: 6px 6px 0px 0px #ff4d9a;
-  --sutra-shadow-lg: 10px 10px 0px 0px #14d6c6;
+  --sutra-color-bg-canvas: #100e14;
+  --sutra-color-bg-surface: #1b1822;
+  --sutra-color-bg-subtle: #26222e;
+  --sutra-color-bg-sunken: #0b090e;
+  --sutra-color-bg-inverse: #f4efe6;
+  --sutra-color-bg-primary: #f4efe6;
+  --sutra-color-bg-primary-hover: #fbf8f3;
+  --sutra-color-bg-primary-subtle: #142824;
+  --sutra-color-bg-accent: #8a3a34;
+  --sutra-color-bg-accent-hover: #a24a42;
+  --sutra-color-bg-accent-subtle: #2a1818;
+  --sutra-color-bg-danger: #8a3a34;
+  --sutra-color-bg-danger-hover: #a24a42;
+  --sutra-color-bg-danger-subtle: #2a1616;
+  --sutra-color-bg-success: #2f6a56;
+  --sutra-color-bg-success-subtle: #12241c;
+  --sutra-color-bg-warning-subtle: #2a2416;
+  --sutra-color-bg-info-subtle: #1c1a2a;
+  --sutra-color-fg-default: #f4efe6;
+  --sutra-color-fg-muted: #cbbfae;
+  --sutra-color-fg-on-primary: #100e14;
+  --sutra-color-fg-on-accent: #f4efe6;
+  --sutra-color-fg-on-danger: #f4efe6;
+  --sutra-color-fg-on-success: #f4efe6;
+  --sutra-color-fg-on-inverse: #100e14;
+  --sutra-color-fg-link: #b7d4cc;
+  --sutra-color-fg-primary: #b7d4cc;
+  --sutra-color-fg-accent: #e4b2aa;
+  --sutra-color-fg-danger: #e4b2aa;
+  --sutra-color-fg-success: #b7d4c4;
+  --sutra-color-fg-warning: #e2cfab;
+  --sutra-color-fg-info: #d4d0e4;
+  --sutra-color-border-default: #c4b49a;
+  --sutra-color-border-strong: #e2cfab;
+  --sutra-color-border-primary: #b7d4cc;
+  --sutra-color-focus-ring: #e2cfab;
+  --sutra-color-thread-start: #e2cfab;
+  --sutra-color-thread-end: #b7d4cc;
+  --sutra-gradient-rule: linear-gradient(90deg, transparent, #c4b49a 18%, #c4b49a 82%, transparent);
+  --sutra-gradient-veil: radial-gradient(640px 300px at 100% 0%, rgba(196, 180, 154, 0.12), transparent 60%);
+  --sutra-pattern-kalamkari: repeating-linear-gradient(90deg, transparent 0 23px, rgba(196, 180, 154, 0.28) 23px 24px), repeating-linear-gradient(0deg, transparent 0 23px, rgba(196, 180, 154, 0.28) 23px 24px);
+  --sutra-pattern-blockprint: repeating-linear-gradient(135deg, transparent 0 15px, rgba(228, 178, 170, 0.2) 15px 16px);
+  --sutra-shadow-sm: 0px 1px 2px 0px rgba(0, 0, 0, 0.35), 0px 10px 24px 0px rgba(0, 0, 0, 0.28);
+  --sutra-shadow-md: 0px 1px 2px 0px rgba(0, 0, 0, 0.3), 0px 18px 40px 0px rgba(0, 0, 0, 0.4);
+  --sutra-shadow-lg: 0px 2px 4px 0px rgba(0, 0, 0, 0.35), 0px 32px 64px 0px rgba(0, 0, 0, 0.5);
   }
 }
 
@@ -332,15 +341,15 @@
 
 .sutra-thread {
   width: 4.5rem;
-  height: 8px;
+  height: 1px;
   border: 0;
-  border-radius: var(--sutra-radius-full);
-  background: var(--sutra-gradient-festival);
+  border-radius: 0;
+  background: var(--sutra-gradient-rule);
 }
 
 .sutra-pattern {
-  background-image: var(--sutra-pattern-rangoli);
-  background-size: 24px 24px;
+  background-image: var(--sutra-pattern-kalamkari);
+  background-size: auto;
 }
 
 .sutra-pattern-print {
@@ -349,18 +358,17 @@
 
 .sutra-mesh {
   background-color: var(--sutra-color-bg-canvas);
-  background-image: var(--sutra-pattern-rangoli), var(--sutra-gradient-mesh);
-  background-size: 24px 24px, auto;
+  background-image: var(--sutra-pattern-kalamkari), var(--sutra-gradient-veil);
 }
 
 .sutra-button {
   appearance: none;
-  border: 2px solid transparent;
-  border-radius: var(--sutra-radius-lg);
+  border: 1px solid transparent;
+  border-radius: var(--sutra-radius-sm);
   background: transparent;
   color: var(--sutra-color-fg-default);
   font: inherit;
-  font-weight: var(--sutra-font-weight-bold);
+  font-weight: var(--sutra-font-weight-medium);
   line-height: 1;
   display: inline-flex;
   align-items: center;
@@ -377,25 +385,25 @@
     color var(--sutra-motion-duration-fast) var(--sutra-motion-easing-standard);
 }
 
-.sutra-button:hover { transform: translateY(-2px); }
-.sutra-button:active { transform: scale(0.96); }
+.sutra-button:hover { background-color: var(--sutra-color-bg-subtle); }
+.sutra-button:active { transform: translateY(1px); }
 
 .sutra-button--sm { min-height: 36px; padding: 0 var(--sutra-space-3); font-size: var(--sutra-font-size-sm); }
 .sutra-button--md { min-height: 44px; padding: 0 var(--sutra-space-4); font-size: var(--sutra-font-size-md); }
 .sutra-button--lg { min-height: 48px; padding: 0 var(--sutra-space-5); font-size: var(--sutra-font-size-lg); }
 
 .sutra-button--primary { background: var(--sutra-color-bg-primary); color: var(--sutra-color-fg-on-primary); }
-.sutra-button--primary:hover { background: var(--sutra-color-bg-primary-hover); box-shadow: var(--sutra-shadow-md); }
+.sutra-button--primary:hover { background: var(--sutra-color-bg-primary-hover); }
 .sutra-button--secondary {
   background: var(--sutra-color-bg-surface);
   color: var(--sutra-color-fg-default);
   border-color: var(--sutra-color-border-strong);
 }
-.sutra-button--secondary:hover { background: var(--sutra-color-bg-subtle); box-shadow: var(--sutra-shadow-md); }
+.sutra-button--secondary:hover { background: var(--sutra-color-bg-subtle); }
 .sutra-button--ghost { background: transparent; color: var(--sutra-color-fg-accent); box-shadow: none; }
 .sutra-button--ghost:hover { background: var(--sutra-color-bg-accent-subtle); }
 .sutra-button--danger { background: var(--sutra-color-bg-danger); color: var(--sutra-color-fg-on-danger); }
-.sutra-button--danger:hover { background: var(--sutra-color-bg-danger-hover); box-shadow: var(--sutra-shadow-md); }
+.sutra-button--danger:hover { background: var(--sutra-color-bg-danger-hover); }
 
 .sutra-button:disabled {
   background: var(--sutra-color-bg-subtle);
@@ -452,8 +460,8 @@
 .sutra-input, .sutra-select {
   width: 100%;
   min-height: 48px;
-  border: 2px solid var(--sutra-color-border-default);
-  border-radius: var(--sutra-radius-md);
+  border: 1px solid var(--sutra-color-border-default);
+  border-radius: var(--sutra-radius-sm);
   background: var(--sutra-color-bg-surface);
   color: var(--sutra-color-fg-default);
   font: inherit;
@@ -545,9 +553,9 @@
 
 .sutra-card {
   background: var(--sutra-color-bg-surface);
-  border: 2px solid var(--sutra-color-border-default);
-  border-radius: var(--sutra-radius-xl);
-  box-shadow: var(--sutra-shadow-md);
+  border: 1px solid var(--sutra-color-border-default);
+  border-radius: var(--sutra-radius-md);
+  box-shadow: var(--sutra-shadow-sm);
 }
 .sutra-card-header, .sutra-card-body, .sutra-card-footer { padding: var(--sutra-space-5); }
 .sutra-card-header { padding-bottom: 0; }
@@ -561,14 +569,14 @@
   font-family: var(--sutra-font-family-display);
   font-size: var(--sutra-font-size-xl);
   line-height: var(--sutra-font-line-xl);
-  font-weight: var(--sutra-font-weight-bold);
+  font-weight: var(--sutra-font-weight-medium);
 }
 
 .sutra-result {
   background: var(--sutra-color-bg-surface);
-  border: 2px solid var(--sutra-color-border-default);
-  border-radius: var(--sutra-radius-xl);
-  box-shadow: var(--sutra-shadow-lg);
+  border: 1px solid var(--sutra-color-border-default);
+  border-radius: var(--sutra-radius-md);
+  box-shadow: var(--sutra-shadow-md);
   padding: var(--sutra-space-6);
   display: grid;
   gap: var(--sutra-space-2);
@@ -584,8 +592,8 @@
   font-family: var(--sutra-font-family-display);
   font-size: var(--sutra-font-size-4xl);
   line-height: var(--sutra-font-line-4xl);
-  font-weight: var(--sutra-font-weight-bold);
-  color: var(--sutra-color-fg-primary);
+  font-weight: var(--sutra-font-weight-medium);
+  color: var(--sutra-color-fg-default);
 }
 .sutra-result--primary .sutra-result-value { color: var(--sutra-color-fg-primary); }
 .sutra-result--success .sutra-result-value { color: var(--sutra-color-fg-success); }
@@ -791,8 +799,8 @@
   content: "";
   position: absolute;
   inset: 0 0 auto;
-  height: 6px;
-  background: var(--sutra-gradient-festival);
+  height: 1px;
+  background: var(--sutra-color-thread-start);
 }
 .sutra-mark {
   display: inline-flex;
@@ -801,7 +809,7 @@
   color: var(--sutra-color-fg-default);
   text-decoration: none;
   font-family: var(--sutra-font-family-display);
-  font-weight: var(--sutra-font-weight-bold);
+  font-weight: var(--sutra-font-weight-medium);
   font-size: var(--sutra-font-size-xl);
 }
 .sutra-mark-icon { color: var(--sutra-color-fg-primary); }
@@ -894,7 +902,7 @@
   font-family: var(--sutra-font-family-display);
   font-size: var(--sutra-font-size-3xl);
   line-height: var(--sutra-font-line-3xl);
-  font-weight: var(--sutra-font-weight-bold);
+  font-weight: var(--sutra-font-weight-medium);
 }
 .sutra-tool-intro p { margin: 0; color: var(--sutra-color-fg-muted); }
 .sutra-breadcrumb { flex-wrap: wrap; font-size: var(--sutra-font-size-sm); }
@@ -953,11 +961,26 @@
   .sutra-toaster { left: var(--sutra-space-4); right: var(--sutra-space-4); width: auto; }
 }
 
-@media (prefers-reduced-motion: reduce) {
-  .sutra-button:hover,
-  .sutra-button:active {
-    transform: none;
+.sutra-ink {
+  fill: none;
+  stroke-dasharray: 1;
+  stroke-dashoffset: 0;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .sutra-ink {
+    animation: sutra-draw var(--sutra-motion-duration-slow) var(--sutra-motion-easing-standard) forwards;
   }
+}
+
+@keyframes sutra-draw {
+  from { stroke-dashoffset: 1; }
+  to { stroke-dashoffset: 0; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .sutra-button:active { transform: none; }
+  .sutra-ink { animation: none; stroke-dashoffset: 0; }
 }
 
 @media (forced-colors: active) {

@@ -39,10 +39,11 @@ const preset = {
           "sans-serif"
         ],
         "display": [
-          "Baloo 2",
+          "Fraunces",
           "Noto Sans Devanagari",
-          "Inter",
-          "sans-serif"
+          "Iowan Old Style",
+          "Palatino",
+          "serif"
         ],
         "mono": [
           "IBM Plex Mono",

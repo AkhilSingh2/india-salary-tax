@@ -24,7 +24,8 @@ body {
 h2,
 h3 {
   font-family: var(--sutra-font-family-display);
-  font-weight: var(--sutra-font-weight-bold);
+  font-weight: var(--sutra-font-weight-medium);
+  letter-spacing: -0.02em;
   line-height: var(--sutra-font-line-xl);
 }
 
@@ -36,6 +37,8 @@ a {
   position: sticky;
   top: 0;
   z-index: 30;
+  background: color-mix(in srgb, var(--sutra-color-bg-canvas) 92%, transparent);
+  backdrop-filter: blur(12px);
 }
 
 .sutra-nav a[aria-current="page"] {
@@ -56,9 +59,8 @@ a {
   margin: 0;
   color: var(--sutra-color-fg-accent);
   font-size: var(--sutra-font-size-sm);
-  font-weight: var(--sutra-font-weight-bold);
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
+  font-weight: var(--sutra-font-weight-semibold);
+  letter-spacing: 0.04em;
 }
 
 .stack,
@@ -79,15 +81,16 @@ a {
   gap: var(--sutra-space-4);
   margin: 0;
   padding: var(--sutra-space-4);
-  border: 2px solid var(--sutra-color-border-default);
-  border-radius: var(--sutra-radius-lg);
+  border: 1px solid var(--sutra-color-border-default);
+  border-radius: var(--sutra-radius-md);
   background: var(--sutra-color-bg-surface);
 }
 
 .form-section > legend {
   padding: 0 var(--sutra-space-2);
   font-family: var(--sutra-font-family-display);
-  font-weight: var(--sutra-font-weight-bold);
+  font-weight: var(--sutra-font-weight-medium);
+  letter-spacing: -0.02em;
 }
 
 .actions {

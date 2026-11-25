@@ -1,6 +1,6 @@
 # Vendored Sutra UI
 
-Built `@sutra-ui/tokens` and `@sutra-ui/react` from [AkhilSingh2/sutra-ui](https://github.com/AkhilSingh2/sutra-ui) commit `15ffa907a044f074abb6df4d331f179e8dda7a8b` on `main`.
+Built `@sutra-ui/tokens` and `@sutra-ui/react` from [AkhilSingh2/sutra-ui](https://github.com/AkhilSingh2/sutra-ui) commit `ba0f4b4510f93ad44ac77e41d99d27e031895763` (“Restyle Sutra UI as a restrained gallery”) on `main`.
 
 The packages are not on npm. This repo depends on these folders with `file:`, so `npm ci` does not need pnpm, Style Dictionary, or a clone of the design-system repo.
 

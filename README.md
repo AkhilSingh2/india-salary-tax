@@ -37,7 +37,7 @@ Home, in-hand salary, HRA, rent receipts, and dark mode.
 
 Pages are built with [Sutra UI](https://github.com/AkhilSingh2/sutra-ui) components and design tokens. The packages are not on npm. Built files live in [`vendor/sutra-ui/`](vendor/sutra-ui/README.md) and are installed with `file:` dependencies, so CI can run `npm ci` without cloning the design system.
 
-App CSS uses the token variables (`--sutra-color-*`, `--sutra-font-*`, `--sutra-space-*`, `--sutra-radius-*`, `--sutra-shadow-*`, `--sutra-motion-*`). It does not name a palette or a typeface. Replacing the vendored `dist` folders and rebuilding picks up a new token build.
+App CSS uses the token variables (`--sutra-color-*`, `--sutra-font-*`, `--sutra-space-*`, `--sutra-radius-*`, `--sutra-shadow-*`, `--sutra-motion-*`). The current vendor build is the gallery edition: Fraunces for display, Inter for text, ivory and ink surfaces, and a gold rule. Replacing the vendored `dist` folders and rebuilding picks up a new token build. The OFL faces are loaded so those family names resolve.
 
 ## Run it locally
 
