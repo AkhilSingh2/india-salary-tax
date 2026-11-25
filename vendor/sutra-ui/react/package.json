@@ -1,0 +1,34 @@
+{
+  "name": "@sutra-ui/react",
+  "version": "0.1.0",
+  "description": "Vendored build of Sutra UI React components.",
+  "license": "MIT",
+  "type": "module",
+  "sideEffects": ["**/*.css"],
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    },
+    "./theme-script": {
+      "types": "./dist/theme-script.d.ts",
+      "import": "./dist/theme-script.js"
+    },
+    "./styles.css": "./dist/styles.css",
+    "./package.json": "./package.json"
+  },
+  "files": ["dist"],
+  "peerDependencies": {
+    "react": ">=18",
+    "react-dom": ">=18"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AkhilSingh2/sutra-ui.git",
+    "directory": "packages/react"
+  },
+  "homepage": "https://akhilsingh2.github.io/sutra-ui/"
+}

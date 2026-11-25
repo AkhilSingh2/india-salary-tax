@@ -34,7 +34,7 @@ await shot(`${base}/income-tax-calculator/`, "tax-mobile.png", ...mobile, async 
   await page.locator("#full-result").scrollIntoViewIfNeeded();
 });
 await shot(`${base}/income-tax-calculator/`, "tax-dark-desktop.png", ...desktop, async (page) => {
-  await page.getByRole("button", { name: /dark mode/i }).click();
+  await page.getByRole("button", { name: "Dark", exact: true }).click();
   await page.waitForTimeout(200);
 });
 await shot(`${base}/in-hand-salary-calculator/`, "salary-desktop.png", ...desktop, async (page) => {
@@ -55,6 +55,11 @@ await shot(`${base}/rent-receipt-generator/`, "receipt-mobile.png", ...mobile, a
   await page.getByRole("button", { name: /labelled sample/i }).click();
   await page.locator(".receipt-sheet").first().scrollIntoViewIfNeeded();
 });
+
+if (process.env.SKIP_OG === "1") {
+  await browser.close();
+  process.exit(0);
+}
 
 const cards = [
   ["income-tax.png", "Income tax calculator", "Old and new regime, side by side", "FY 2025-26 · AY 2026-27"],

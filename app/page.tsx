@@ -1,6 +1,8 @@
+import { Button, Card, CardBody, CardHeader } from "@sutra-ui/react";
 import Link from "next/link";
 import { JsonLd } from "@/components/JsonLd";
-import { pageUrl, SITE_NAME } from "@/lib/site";
+import { PageShell } from "@/components/PageShell";
+import { appHref, pageUrl, SITE_NAME } from "@/lib/site";
 import { RULES_VERSION } from "@/lib/tax-rules";
 
 const tools = [
@@ -32,7 +34,10 @@ const tools = [
 
 export default function HomePage() {
   return (
-    <>
+    <PageShell
+      title="Salary and income tax calculators for India."
+      description="Four quiet tools for salaried people. Compare the old regime and the new regime, turn CTC into in-hand pay, check HRA exemption, and print rent receipts. No ads, no account, and no upload."
+    >
       <JsonLd
         data={{
           "@context": "https://schema.org",
@@ -55,37 +60,54 @@ export default function HomePage() {
           })),
         }}
       />
-      <p className="eyebrow">FY 2025-26 · AY 2026-27</p>
-      <h1>Salary and income tax calculators for India.</h1>
-      <p className="lede">
-        Four quiet tools for salaried people. Compare the old regime and the new regime, turn CTC into
-        in-hand pay, check HRA exemption, and print rent receipts. No ads, no account, and no upload.
-      </p>
+      <p className="kicker">FY 2025-26 · AY 2026-27</p>
       <div className="actions">
-        <Link className="btn btn-primary" href="/income-tax-calculator/">Income tax calculator</Link>
-        <Link className="btn btn-ghost" href="/in-hand-salary-calculator/">In-hand salary calculator</Link>
+        <Button href={appHref("/income-tax-calculator/")}>Income tax calculator</Button>
+        <Button href={appHref("/in-hand-salary-calculator/")} variant="secondary">
+          In-hand salary calculator
+        </Button>
       </div>
-      <div className="fact-row">
-        <article className="card" style={{ padding: "1rem" }}>
-          <h2 style={{ fontSize: "1.2rem" }}>Rules you can read</h2>
-          <p>Version {RULES_VERSION} lives in one file, with links to the Budget speech, the Finance Bill and incometax.gov.in.</p>
-        </article>
-        <article className="card" style={{ padding: "1rem" }}>
-          <h2 style={{ fontSize: "1.2rem" }}>A number, then the working</h2>
-          <p>Each tool opens with the answer. Slabs, PF and the HRA test sit underneath, not behind a sign-up.</p>
-        </article>
-        <article className="card" style={{ padding: "1rem" }}>
-          <h2 style={{ fontSize: "1.2rem" }}>Stays on your phone</h2>
-          <p>Rent-receipt details never leave the browser. Theme and language are the only things saved on the device.</p>
-        </article>
+      <div className="stack cols-3">
+        <Card>
+          <CardHeader>
+            <h2 className="sutra-card-title">Rules you can read</h2>
+          </CardHeader>
+          <CardBody>
+            <p>Version {RULES_VERSION} lives in one file, with links to the Budget speech, the Finance Bill and incometax.gov.in.</p>
+          </CardBody>
+        </Card>
+        <Card>
+          <CardHeader>
+            <h2 className="sutra-card-title">A number, then the working</h2>
+          </CardHeader>
+          <CardBody>
+            <p>Each tool opens with the answer. Slabs, PF and the HRA test sit underneath, not behind a sign-up.</p>
+          </CardBody>
+        </Card>
+        <Card>
+          <CardHeader>
+            <h2 className="sutra-card-title">Stays on your phone</h2>
+          </CardHeader>
+          <CardBody>
+            <p>Rent-receipt details never leave the browser. Theme and language are the only things saved on the device.</p>
+          </CardBody>
+        </Card>
       </div>
-      <div className="tool-grid">
+      <div className="stack cols-2">
         {tools.map((tool) => (
-          <article key={tool.href} className="tool-card">
-            <span className="index">{tool.index}</span>
-            <h2><Link href={tool.href}>{tool.title}</Link></h2>
-            <p>{tool.text}</p>
-          </article>
+          <Card key={tool.href}>
+            <CardHeader>
+              <p className="kicker">{tool.index}</p>
+              <h2 className="sutra-card-title">
+                <Link className="card-link" href={tool.href}>
+                  {tool.title}
+                </Link>
+              </h2>
+            </CardHeader>
+            <CardBody>
+              <p>{tool.text}</p>
+            </CardBody>
+          </Card>
         ))}
       </div>
       <section className="prose">
@@ -108,6 +130,6 @@ export default function HomePage() {
           तब मायने रखती है जब HRA, 80C, स्वास्थ्य बीमा और होम लोन का ब्याज बड़ा हो।
         </p>
       </section>
-    </>
+    </PageShell>
   );
 }

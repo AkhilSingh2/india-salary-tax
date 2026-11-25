@@ -1,26 +1,13 @@
 import type { Metadata, Viewport } from "next";
 import type { ReactNode } from "react";
-import { Fraunces, Source_Sans_3 } from "next/font/google";
 import Script from "next/script";
-import { SiteFooter } from "@/components/SiteFooter";
-import { SiteHeader } from "@/components/SiteHeader";
+import { themeInitScript } from "@sutra-ui/react/theme-script";
+import { Providers } from "@/components/Providers";
 import { SITE_NAME, absoluteUrl, pageUrl } from "@/lib/site";
+import "@sutra-ui/react/styles.css";
 import "./globals.css";
 
-const display = Fraunces({
-  subsets: ["latin"],
-  display: "swap",
-  variable: "--font-display",
-});
-
-const sans = Source_Sans_3({
-  subsets: ["latin"],
-  weight: ["400", "500", "600", "700"],
-  display: "swap",
-  variable: "--font-sans",
-});
-
-const themeBoot = `(function(){try{var r=document.documentElement;var t=localStorage.getItem("aayam-theme");var dark=t?t==="dark":window.matchMedia("(prefers-color-scheme: dark)").matches;r.classList.toggle("dark",dark);r.style.colorScheme=dark?"dark":"light";var m=document.querySelector('meta[name="theme-color"]');if(m)m.setAttribute("content",dark?"#121411":"#f3eee4");var l=localStorage.getItem("aayam-lang");r.setAttribute("data-lang",l==="hi"?"hi":"en");}catch(e){document.documentElement.setAttribute("data-lang","en");}})();`;
+const themeBoot = `(function(){try{var s=localStorage;if(!s.getItem("sutra-theme")){var legacy=s.getItem("aayam-theme");if(legacy==="dark"||legacy==="light")s.setItem("sutra-theme",legacy);}if(!s.getItem("sutra-locale")){var lang=s.getItem("aayam-lang");if(lang==="hi"||lang==="en")s.setItem("sutra-locale",lang);}}catch(e){}})();${themeInitScript};(function(){try{var locale=localStorage.getItem("sutra-locale");document.documentElement.setAttribute("data-lang",locale==="hi"?"hi":"en");}catch(e){document.documentElement.setAttribute("data-lang","en");}})();`;
 
 export const metadata: Metadata = {
   metadataBase: new URL(pageUrl("/")),
@@ -44,13 +31,12 @@ export const viewport: Viewport = {
 
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
-    <html lang="en" data-lang="en" className={`${display.variable} ${sans.variable}`} suppressHydrationWarning>
+    <html lang="en" data-lang="en" suppressHydrationWarning>
       <body>
-        <Script id="theme-boot" strategy="beforeInteractive">{themeBoot}</Script>
-        <a className="skip-link" href="#content">Skip to content</a>
-        <SiteHeader />
-        <main id="content" className="wrap" style={{ padding: "1.5rem 0 3rem" }}>{children}</main>
-        <SiteFooter />
+        <Script id="theme-boot" strategy="beforeInteractive">
+          {themeBoot}
+        </Script>
+        <Providers>{children}</Providers>
       </body>
     </html>
   );

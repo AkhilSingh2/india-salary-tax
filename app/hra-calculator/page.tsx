@@ -1,6 +1,7 @@
 import Link from "next/link";
+import { BilingualFaq } from "@/components/BilingualFaq";
 import { JsonLd } from "@/components/JsonLd";
-import { Crumbs, Faq, Related } from "@/components/Related";
+import { PageShell } from "@/components/PageShell";
 import { HraCalculator } from "@/components/HraCalculator";
 import { breadcrumbSchema, faqSchema, pageMeta, softwareSchema } from "@/lib/seo";
 
@@ -58,17 +59,19 @@ export const metadata = pageMeta({
 
 export default function HraPage() {
   return (
-    <>
+    <PageShell
+      title="HRA calculator"
+      description="Metro or not, the exemption is the lowest of the three statutory limits. Enter monthly figures, or the totals for the months you actually rented."
+      breadcrumb={[
+        { href: "/", label: "Home" },
+        { href: "/hra-calculator/", label: "HRA calculator" },
+      ]}
+      current="/hra-calculator/"
+    >
       <JsonLd data={softwareSchema({ path: "/hra-calculator/", name: title, description })} />
       <JsonLd data={faqSchema(faqs)} />
       <JsonLd data={breadcrumbSchema([{ name: "Home", path: "/" }, { name: "HRA calculator", path: "/hra-calculator/" }])} />
-      <Crumbs items={[{ href: "/", label: "Home" }, { href: "/hra-calculator/", label: "HRA calculator" }]} />
-      <p className="eyebrow">Section 10(13A) · Rule 2A</p>
-      <h1>HRA calculator</h1>
-      <p className="lede">
-        Metro or not, the exemption is the lowest of the three statutory limits. Enter monthly figures,
-        or the totals for the months you actually rented.
-      </p>
+      <p className="kicker">Section 10(13A) · Rule 2A</p>
       <HraCalculator />
       <section className="prose">
         <h2>What counts as salary</h2>
@@ -86,9 +89,7 @@ export default function HraPage() {
           employer asks for one.
         </p>
       </section>
-      <Faq id="hra-faq" title="Questions" items={faqs} />
-      <Faq id="hra-faq-hi" title="हिंदी में सवाल" items={hindi} />
-      <Related current="/hra-calculator/" />
-    </>
+      <BilingualFaq id="hra-faq" title="Questions" items={faqs} hiId="hra-faq-hi" hiTitle="हिंदी में सवाल" hiItems={hindi} />
+    </PageShell>
   );
 }
