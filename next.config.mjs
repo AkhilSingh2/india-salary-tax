@@ -7,6 +7,7 @@ const nextConfig = {
   reactStrictMode: true,
   poweredByHeader: false,
   images: { unoptimized: true },
+  transpilePackages: ["@sutra-ui/react", "@sutra-ui/tokens"],
   ...(basePath ? { basePath } : {}),
 };
 

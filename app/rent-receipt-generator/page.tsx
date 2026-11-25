@@ -1,6 +1,7 @@
 import Link from "next/link";
+import { BilingualFaq } from "@/components/BilingualFaq";
 import { JsonLd } from "@/components/JsonLd";
-import { Crumbs, Faq, Related } from "@/components/Related";
+import { PageShell } from "@/components/PageShell";
 import { RentReceiptTool } from "@/components/RentReceiptTool";
 import { breadcrumbSchema, faqSchema, pageMeta, softwareSchema } from "@/lib/seo";
 
@@ -58,17 +59,19 @@ export const metadata = pageMeta({
 
 export default function RentReceiptPage() {
   return (
-    <>
+    <PageShell
+      title="Rent receipt generator"
+      description="Enter the tenant, the landlord, the rent and the months. Download a PDF, or print the preview. An optional landlord PAN is there for HRA claims above ₹1,00,000 a year."
+      breadcrumb={[
+        { href: "/", label: "Home" },
+        { href: "/rent-receipt-generator/", label: "Rent receipt generator" },
+      ]}
+      current="/rent-receipt-generator/"
+    >
       <JsonLd data={softwareSchema({ path: "/rent-receipt-generator/", name: title, description })} />
       <JsonLd data={faqSchema(faqs)} />
       <JsonLd data={breadcrumbSchema([{ name: "Home", path: "/" }, { name: "Rent receipt generator", path: "/rent-receipt-generator/" }])} />
-      <Crumbs items={[{ href: "/", label: "Home" }, { href: "/rent-receipt-generator/", label: "Rent receipt generator" }]} />
-      <p className="eyebrow">In your browser · nothing is uploaded</p>
-      <h1>Rent receipt generator</h1>
-      <p className="lede">
-        Enter the tenant, the landlord, the rent and the months. Download a PDF, or print the preview.
-        An optional landlord PAN is there for HRA claims above ₹1,00,000 a year.
-      </p>
+      <p className="kicker">In your browser · nothing is uploaded</p>
       <RentReceiptTool />
       <section className="prose">
         <h2>What the PDF contains</h2>
@@ -85,9 +88,14 @@ export default function RentReceiptPage() {
           obvious placeholder names so you can see the layout without using a real person.
         </p>
       </section>
-      <Faq id="receipt-faq" title="Questions" items={faqs} />
-      <Faq id="receipt-faq-hi" title="हिंदी में सवाल" items={hindi} />
-      <Related current="/rent-receipt-generator/" />
-    </>
+      <BilingualFaq
+        id="receipt-faq"
+        title="Questions"
+        items={faqs}
+        hiId="receipt-faq-hi"
+        hiTitle="हिंदी में सवाल"
+        hiItems={hindi}
+      />
+    </PageShell>
   );
 }

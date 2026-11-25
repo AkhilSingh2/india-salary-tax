@@ -1,7 +1,9 @@
 "use client";
 
-import { useMemo, useState, type ChangeEvent, type ReactNode } from "react";
-import { Bi } from "@/components/Bi";
+import { useMemo, useState } from "react";
+import { Alert, Button, NumberInput } from "@sutra-ui/react";
+import { MoneyField, MonthField, SegmentField, TextArea, TextField } from "@/components/Fields";
+import { useT } from "@/components/use-t";
 import { buildReceiptModel, type PaymentMode, type ReceiptInput } from "@/lib/receipt";
 import { formatINR } from "@/lib/money";
 
@@ -31,6 +33,7 @@ const SAMPLE: ReceiptInput = {
 };
 
 export function RentReceiptTool() {
+  const t = useT();
   const [form, setForm] = useState<ReceiptInput>(EMPTY);
   const [busy, setBusy] = useState(false);
   const [pdfError, setPdfError] = useState(false);
@@ -39,6 +42,18 @@ export function RentReceiptTool() {
   function patch(partial: Partial<ReceiptInput>) {
     setPdfError(false);
     setForm((current) => ({ ...current, ...partial }));
+  }
+
+  function message(code?: string): string | undefined {
+    if (code === "tenant") return t("Enter the tenant's name.", "किरायेदार का नाम भरें।");
+    if (code === "landlord") return t("Enter the landlord's name.", "मकान मालिक का नाम भरें।");
+    if (code === "property") return t("Enter the rented address.", "किराए के मकान का पता भरें।");
+    if (code === "rent") return t("Enter the monthly rent.", "मासिक किराया भरें।");
+    if (code === "day") return t("Use a day from 1 to 28 so every month is valid.", "हर महीने के लिए 1 से 28 के बीच की तारीख रखें।");
+    if (code === "pan") return t("PAN should look like ABCDE1234F, or leave it blank.", "PAN ABCDE1234F जैसा होना चाहिए, वरना खाली छोड़ें।");
+    if (code === "long") return t("Generate one year at a time (up to 12 receipts).", "एक बार में एक साल की रसीदें बनाएँ (अधिकतम 12)।");
+    if (code === "range") return t("Choose a start month that is the same as, or before, the end month.", "शुरुआती महीना अंत वाले महीने के बाद का न हो।");
+    return undefined;
   }
 
   async function download() {
@@ -68,94 +83,173 @@ export function RentReceiptTool() {
   }
 
   return (
-    <section className="calculator">
-      <div className="callout privacy">
-        <strong><Bi en="Nothing you type leaves this browser." hi="आप जो भरते हैं वह इस ब्राउज़र से बाहर नहीं जाता।" /></strong>
-        <p>
-          <Bi
-            en="There is no account and no upload. The PDF is built on this device when you ask for it. Close the tab and the details are gone."
-            hi="कोई खाता नहीं, कोई अपलोड नहीं। PDF इसी डिवाइस पर बनता है। टैब बंद करते ही विवरण मिट जाता है।"
+    <section className="stack">
+      <Alert tone="success" title={t("Nothing you type leaves this browser.", "आप जो भरते हैं वह इस ब्राउज़र से बाहर नहीं जाता।")}>
+        {t(
+          "There is no account and no upload. The PDF is built on this device when you ask for it. Close the tab and the details are gone.",
+          "कोई खाता नहीं, कोई अपलोड नहीं। PDF इसी डिवाइस पर बनता है। टैब बंद करते ही विवरण मिट जाता है।",
+        )}
+      </Alert>
+      <div className="calc-grid">
+        <form
+          className="form-stack"
+          onSubmit={(event) => {
+            event.preventDefault();
+            void download();
+          }}
+          noValidate
+        >
+          <TextField
+            id="tenant"
+            label={t("Tenant name", "किरायेदार का नाम")}
+            value={form.tenantName}
+            onChange={(tenantName) => patch({ tenantName })}
+            error={message(model.errors.tenantName)}
+            autoComplete="name"
           />
-        </p>
-      </div>
-      <div className="split" style={{ marginTop: "1rem" }}>
-        <form onSubmit={(event) => { event.preventDefault(); void download(); }} noValidate>
-          <TextField id="tenant" label={<Bi en="Tenant name" hi="किरायेदार का नाम" />} value={form.tenantName} onChange={(tenantName) => patch({ tenantName })} error={errorText(model.errors.tenantName)} autoComplete="name" />
-          <TextField id="tenant-address" label={<Bi en="Tenant address (optional)" hi="किरायेदार का पता (वैकल्पिक)" />} value={form.tenantAddress} onChange={(tenantAddress) => patch({ tenantAddress })} multiline />
-          <TextField id="landlord" label={<Bi en="Landlord name" hi="मकान मालिक का नाम" />} value={form.landlordName} onChange={(landlordName) => patch({ landlordName })} error={errorText(model.errors.landlordName)} />
-          <TextField id="pan" label={<Bi en="Landlord PAN (optional)" hi="मकान मालिक का PAN (वैकल्पिक)" />} value={form.landlordPan} onChange={(landlordPan) => patch({ landlordPan: landlordPan.toUpperCase() })} error={errorText(model.errors.pan)} hint={<Bi en="Employers usually ask for it when rent in the year is above ₹1,00,000." hi="साल का किराया ₹1,00,000 से ऊपर हो तो नियोक्ता आमतौर पर PAN माँगता है।" />} />
-          <TextField id="landlord-address" label={<Bi en="Landlord address (optional)" hi="मकान मालिक का पता (वैकल्पिक)" />} value={form.landlordAddress} onChange={(landlordAddress) => patch({ landlordAddress })} multiline />
-          <TextField id="property" label={<Bi en="Address of the rented home" hi="किराए के मकान का पता" />} value={form.propertyAddress} onChange={(propertyAddress) => patch({ propertyAddress })} error={errorText(model.errors.propertyAddress)} multiline />
-          <div className="field">
-            <div className="field-top">
-              <label htmlFor="rent-amount"><Bi en="Monthly rent" hi="मासिक किराया" /></label>
-              <span className="num field-readout">{formatINR(form.monthlyRent)}</span>
-            </div>
-            <input id="rent-amount" name="rent-amount" inputMode="numeric" value={form.monthlyRent === 0 ? "" : String(form.monthlyRent)} aria-invalid={model.errors.rent ? true : undefined} aria-describedby={model.errors.rent ? "rent-error" : undefined} onChange={(event) => patch({ monthlyRent: Number(event.target.value.replace(/\D/g, "").slice(0, 9) || 0) })} />
-            {model.errors.rent ? <p id="rent-error" className="error" role="alert">{errorText(model.errors.rent)}</p> : null}
+          <TextArea
+            id="tenant-address"
+            label={t("Tenant address (optional)", "किरायेदार का पता (वैकल्पिक)")}
+            value={form.tenantAddress}
+            onChange={(tenantAddress) => patch({ tenantAddress })}
+          />
+          <TextField
+            id="landlord"
+            label={t("Landlord name", "मकान मालिक का नाम")}
+            value={form.landlordName}
+            onChange={(landlordName) => patch({ landlordName })}
+            error={message(model.errors.landlordName)}
+          />
+          <TextField
+            id="pan"
+            label={t("Landlord PAN (optional)", "मकान मालिक का PAN (वैकल्पिक)")}
+            value={form.landlordPan}
+            onChange={(landlordPan) => patch({ landlordPan: landlordPan.toUpperCase() })}
+            error={message(model.errors.pan)}
+            hint={t(
+              "Employers usually ask for it when rent in the year is above ₹1,00,000.",
+              "साल का किराया ₹1,00,000 से ऊपर हो तो नियोक्ता आमतौर पर PAN माँगता है।",
+            )}
+          />
+          <TextArea
+            id="landlord-address"
+            label={t("Landlord address (optional)", "मकान मालिक का पता (वैकल्पिक)")}
+            value={form.landlordAddress}
+            onChange={(landlordAddress) => patch({ landlordAddress })}
+          />
+          <TextArea
+            id="property"
+            label={t("Address of the rented home", "किराए के मकान का पता")}
+            value={form.propertyAddress}
+            onChange={(propertyAddress) => patch({ propertyAddress })}
+            error={message(model.errors.propertyAddress)}
+          />
+          <MoneyField
+            id="rent-amount"
+            label={t("Monthly rent", "मासिक किराया")}
+            value={form.monthlyRent}
+            onChange={(monthlyRent) => patch({ monthlyRent })}
+            error={message(model.errors.rent)}
+          />
+          <div className="stack cols-2">
+            <MonthField id="from-month" label={t("From", "से")} value={form.from} onChange={(from) => patch({ from })} />
+            <MonthField id="to-month" label={t("To", "तक")} value={form.to} onChange={(to) => patch({ to })} />
           </div>
-          <div className="regime-grid">
-            <MonthField id="from-month" label={<Bi en="From" hi="से" />} value={form.from} onChange={(from) => patch({ from })} />
-            <MonthField id="to-month" label={<Bi en="To" hi="तक" />} value={form.to} onChange={(to) => patch({ to })} />
-          </div>
-          {model.errors.range ? <p className="error" role="alert">{errorText(model.errors.range)}</p> : null}
-          <div className="field">
-            <label htmlFor="day"><Bi en="Day printed on each receipt" hi="हर रसीद पर छपने वाली तारीख" /></label>
-            <input id="day" name="day" inputMode="numeric" value={String(form.receivedDay)} aria-invalid={model.errors.day ? true : undefined} onChange={(event) => patch({ receivedDay: Number(event.target.value.replace(/\D/g, "").slice(0, 2) || 0) })} />
-            <p className="hint"><Bi en="Use 1 to 28 so the date exists in every month." hi="1 से 28 रखें ताकि हर महीने में तारीख बने।" /></p>
-            {model.errors.day ? <p className="error" role="alert">{errorText(model.errors.day)}</p> : null}
-          </div>
-          <fieldset>
-            <legend><Bi en="How the rent was paid" hi="किराया कैसे दिया" /></legend>
-            <div className="choices">
-              {(["upi", "bank", "cheque", "cash"] as PaymentMode[]).map((mode) => (
-                <label key={mode} className="choice">
-                  <input type="radio" name="mode" value={mode} checked={form.paymentMode === mode} onChange={() => patch({ paymentMode: mode })} />
-                  <span>{mode === "upi" ? "UPI" : mode === "bank" ? <Bi en="Bank transfer" hi="बैंक ट्रांसफर" /> : mode === "cheque" ? <Bi en="Cheque" hi="चेक" /> : <Bi en="Cash" hi="नकद" />}</span>
-                </label>
-              ))}
-            </div>
-          </fieldset>
-          <div id="receipt-errors" tabIndex={-1}>
+          {model.errors.range ? (
+            <p className="sutra-error" role="alert">
+              {message(model.errors.range)}
+            </p>
+          ) : null}
+          <NumberInput
+            id="day"
+            name="day"
+            label={t("Day printed on each receipt", "हर रसीद पर छपने वाली तारीख")}
+            decimals={0}
+            min={0}
+            value={form.receivedDay}
+            onValueChange={(value) => patch({ receivedDay: Math.min(99, Math.max(0, Math.round(value ?? 0))) })}
+            hint={t("Use 1 to 28 so the date exists in every month.", "1 से 28 रखें ताकि हर महीने में तारीख बने।")}
+            error={message(model.errors.day)}
+          />
+          <SegmentField
+            label={t("How the rent was paid", "किराया कैसे दिया")}
+            value={form.paymentMode}
+            onChange={(paymentMode: PaymentMode) => patch({ paymentMode })}
+            options={[
+              { value: "upi", label: "UPI" },
+              { value: "bank", label: t("Bank transfer", "बैंक ट्रांसफर") },
+              { value: "cheque", label: t("Cheque", "चेक") },
+              { value: "cash", label: t("Cash", "नकद") },
+            ]}
+          />
+          <div id="receipt-errors" tabIndex={-1} className="stack">
             {model.needsPanWarning ? (
-              <p className="note" role="status">
-                <Bi en="Annual rent is above ₹1,00,000 and PAN is blank. Your employer may ask for the landlord's PAN before allowing the HRA exemption." hi="साल का किराया ₹1,00,000 से ऊपर है और PAN खाली है। HRA छूट से पहले नियोक्ता PAN माँग सकता है।" />
-              </p>
+              <Alert tone="warning" title={t("PAN may be required", "PAN माँगा जा सकता है")}>
+                {t(
+                  "Annual rent is above ₹1,00,000 and PAN is blank. Your employer may ask for the landlord's PAN before allowing the HRA exemption.",
+                  "साल का किराया ₹1,00,000 से ऊपर है और PAN खाली है। HRA छूट से पहले नियोक्ता PAN माँग सकता है।",
+                )}
+              </Alert>
             ) : null}
             {model.needsStamp ? (
-              <p className="note" role="status">
-                <Bi en="Cash rent above ₹5,000 needs a revenue stamp on the signed receipt. A box is left for it." hi="₹5,000 से ऊपर नकद किराए पर हस्ताक्षरित रसीद पर रेवेन्यू स्टांप लगता है। उसके लिए जगह छोड़ी गई है।" />
-              </p>
+              <Alert tone="info" title={t("Revenue stamp", "रेवेन्यू स्टांप")}>
+                {t(
+                  "Cash rent above ₹5,000 needs a revenue stamp on the signed receipt. A box is left for it.",
+                  "₹5,000 से ऊपर नकद किराए पर हस्ताक्षरित रसीद पर रेवेन्यू स्टांप लगता है। उसके लिए जगह छोड़ी गई है।",
+                )}
+              </Alert>
             ) : null}
           </div>
           <div className="actions">
-            <button className="btn btn-primary" type="submit" disabled={busy}>
-              {busy ? <Bi en="Preparing the PDF" hi="PDF बन रहा है" /> : <Bi en="Download PDF" hi="PDF डाउनलोड करें" />}
-            </button>
-            <button className="btn btn-ghost" type="button" onClick={() => window.print()}><Bi en="Print" hi="प्रिंट" /></button>
-            <button className="btn btn-ghost" type="button" onClick={() => setForm(SAMPLE)}><Bi en="Fill a labelled sample" hi="नमूना भरें" /></button>
-            <button className="btn btn-ghost" type="button" onClick={() => setForm(EMPTY)}><Bi en="Clear" hi="साफ़ करें" /></button>
+            <Button type="submit" disabled={busy}>
+              {busy ? t("Preparing the PDF", "PDF बन रहा है") : t("Download PDF", "PDF डाउनलोड करें")}
+            </Button>
+            <Button type="button" variant="secondary" onClick={() => window.print()}>
+              {t("Print", "प्रिंट")}
+            </Button>
+            <Button type="button" variant="ghost" onClick={() => setForm(SAMPLE)}>
+              {t("Fill a labelled sample", "नमूना भरें")}
+            </Button>
+            <Button type="button" variant="ghost" onClick={() => setForm(EMPTY)}>
+              {t("Clear", "साफ़ करें")}
+            </Button>
           </div>
-          {pdfError ? <p className="error" role="alert"><Bi en="The PDF could not be created in this browser." hi="इस ब्राउज़र में PDF नहीं बन पाया।" /></p> : null}
+          {pdfError ? (
+            <p className="sutra-error" role="alert">
+              {t("The PDF could not be created in this browser.", "इस ब्राउज़र में PDF नहीं बन पाया।")}
+            </p>
+          ) : null}
         </form>
-        <div className="result-col">
-          <p className="hint">
-            {model.months.length > 0 ? (
-              <Bi en={`${model.months.length} receipts, ${formatINR(model.annualRent)} of rent in this set.`} hi={`${model.months.length} रसीदें, इस सेट में किराया ${formatINR(model.annualRent)}।`} />
-            ) : (
-              <Bi en="The preview appears once the names, address and rent are filled." hi="नाम, पता और किराया भरते ही झलक दिखेगी।" />
-            )}
+        <div className="result-col stack">
+          <p className="sutra-hint">
+            {model.months.length > 0
+              ? t(
+                  `${model.months.length} receipts, ${formatINR(model.annualRent)} of rent in this set.`,
+                  `${model.months.length} रसीदें, इस सेट में किराया ${formatINR(model.annualRent)}।`,
+                )
+              : t(
+                  "The preview appears once the names, address and rent are filled.",
+                  "नाम, पता और किराया भरते ही झलक दिखेगी।",
+                )}
           </p>
           {model.months.map((month) => (
-            <article key={month.id} className="receipt-sheet" aria-label={month.label}>
+            <article key={month.id} className="sutra-card receipt-sheet" aria-label={month.label}>
               <h3>Rent receipt</h3>
-              <p className="field-top"><span className="num">{month.receiptNo}</span><span>{month.dateLabel}</span></p>
+              <p className="receipt-row">
+                <span className="sutra-num">{month.receiptNo}</span>
+                <span>{month.dateLabel}</span>
+              </p>
               <p>
-                Received from <strong>{form.tenantName || "—"}</strong> the sum of <strong className="num">{formatINR(month.amount)}</strong> ({month.amountInWords}) towards rent of <strong>{form.propertyAddress || "—"}</strong> for {month.label}.
+                Received from <strong>{form.tenantName || "—"}</strong> the sum of{" "}
+                <strong className="sutra-num">{formatINR(month.amount)}</strong> ({month.amountInWords}) towards rent of{" "}
+                <strong>{form.propertyAddress || "—"}</strong> for {month.label}.
               </p>
               <p>Payment: {form.paymentMode === "bank" ? "bank transfer" : form.paymentMode}.</p>
-              <p>Landlord: <strong>{form.landlordName || "—"}</strong>{form.landlordPan.trim() ? ` · PAN ${form.landlordPan.trim().toUpperCase()}` : ""}</p>
-              <div className="field-top" style={{ marginTop: "1.2rem" }}>
+              <p>
+                Landlord: <strong>{form.landlordName || "—"}</strong>
+                {form.landlordPan.trim() ? ` · PAN ${form.landlordPan.trim().toUpperCase()}` : ""}
+              </p>
+              <div className="receipt-row">
                 <span>Signature of landlord</span>
                 {model.needsStamp ? <span className="stamp">Revenue stamp</span> : <span />}
               </div>
@@ -164,67 +258,5 @@ export function RentReceiptTool() {
         </div>
       </div>
     </section>
-  );
-}
-
-function TextField({
-  id,
-  label,
-  value,
-  onChange,
-  error,
-  hint,
-  multiline,
-  autoComplete,
-}: {
-  id: string;
-  label: ReactNode;
-  value: string;
-  onChange: (value: string) => void;
-  error?: ReactNode;
-  hint?: ReactNode;
-  multiline?: boolean;
-  autoComplete?: string;
-}) {
-  const errorId = error ? `${id}-error` : undefined;
-  const hintId = hint ? `${id}-hint` : undefined;
-  const describedBy = [errorId, hintId].filter(Boolean).join(" ") || undefined;
-  const shared = {
-    id,
-    name: id,
-    value,
-    autoComplete,
-    "aria-invalid": error ? true : undefined,
-    "aria-describedby": describedBy,
-    onChange: (event: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => onChange(event.target.value),
-  };
-  return (
-    <div className="field">
-      <label htmlFor={id}>{label}</label>
-      {multiline ? <textarea {...shared} /> : <input {...shared} />}
-      {hint ? <p id={hintId} className="hint">{hint}</p> : null}
-      {error ? <p id={errorId} className="error" role="alert">{error}</p> : null}
-    </div>
-  );
-}
-
-function errorText(code?: string): ReactNode {
-  if (code === "tenant") return <Bi en="Enter the tenant's name." hi="किरायेदार का नाम भरें।" />;
-  if (code === "landlord") return <Bi en="Enter the landlord's name." hi="मकान मालिक का नाम भरें।" />;
-  if (code === "property") return <Bi en="Enter the rented address." hi="किराए के मकान का पता भरें।" />;
-  if (code === "rent") return <Bi en="Enter the monthly rent." hi="मासिक किराया भरें।" />;
-  if (code === "day") return <Bi en="Use a day from 1 to 28 so every month is valid." hi="हर महीने के लिए 1 से 28 के बीच की तारीख रखें।" />;
-  if (code === "pan") return <Bi en="PAN should look like ABCDE1234F, or leave it blank." hi="PAN ABCDE1234F जैसा होना चाहिए, वरना खाली छोड़ें।" />;
-  if (code === "long") return <Bi en="Generate one year at a time (up to 12 receipts)." hi="एक बार में एक साल की रसीदें बनाएँ (अधिकतम 12)।" />;
-  if (code === "range") return <Bi en="Choose a start month that is the same as, or before, the end month." hi="शुरुआती महीना अंत वाले महीने के बाद का न हो।" />;
-  return null;
-}
-
-function MonthField({ id, label, value, onChange }: { id: string; label: ReactNode; value: string; onChange: (value: string) => void }) {
-  return (
-    <div className="field">
-      <label htmlFor={id}>{label}</label>
-      <input id={id} name={id} type="month" value={value} onChange={(event) => onChange(event.target.value)} />
-    </div>
   );
 }

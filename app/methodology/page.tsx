@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { JsonLd } from "@/components/JsonLd";
-import { Crumbs } from "@/components/Related";
+import { PageShell } from "@/components/PageShell";
 import { YearSlabs } from "@/components/SlabReference";
 import { breadcrumbSchema, pageMeta } from "@/lib/seo";
 import { RULES_UPDATED, RULES_VERSION, SHARED, SOURCES } from "@/lib/tax-rules";
@@ -20,15 +20,16 @@ export const metadata = pageMeta({
 
 export default function MethodologyPage() {
   return (
-    <>
+    <PageShell
+      title="How these calculators work"
+      description="Every slab, cap and rate is read from one versioned file. The pages do not keep a second copy. This note says what that file assumes, and what it leaves out."
+      breadcrumb={[
+        { href: "/", label: "Home" },
+        { href: "/methodology/", label: "Methodology" },
+      ]}
+    >
       <JsonLd data={breadcrumbSchema([{ name: "Home", path: "/" }, { name: "Methodology", path: "/methodology/" }])} />
-      <Crumbs items={[{ href: "/", label: "Home" }, { href: "/methodology/", label: "Methodology" }]} />
-      <p className="eyebrow">Rules {RULES_VERSION} · {RULES_UPDATED}</p>
-      <h1>How these calculators work</h1>
-      <p className="lede">
-        Every slab, cap and rate is read from one versioned file. The pages do not keep a second copy.
-        This note says what that file assumes, and what it leaves out.
-      </p>
+      <p className="kicker">Rules {RULES_VERSION} · {RULES_UPDATED}</p>
       <section className="prose">
         <h2>Order of the income-tax sum</h2>
         <ol>
@@ -100,6 +101,6 @@ export default function MethodologyPage() {
           <Link href="/rent-receipt-generator/">rent receipts</Link>.
         </p>
       </section>
-    </>
+    </PageShell>
   );
 }

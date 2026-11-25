@@ -1,0 +1,842 @@
+[
+  {
+    "path": "color.ivory.50",
+    "name": "--sutra-color-ivory-50",
+    "type": "color",
+    "value": "#fbf8f3",
+    "description": null
+  },
+  {
+    "path": "color.ivory.100",
+    "name": "--sutra-color-ivory-100",
+    "type": "color",
+    "value": "#f4efe6",
+    "description": null
+  },
+  {
+    "path": "color.ivory.200",
+    "name": "--sutra-color-ivory-200",
+    "type": "color",
+    "value": "#ebe4d6",
+    "description": null
+  },
+  {
+    "path": "color.ivory.300",
+    "name": "--sutra-color-ivory-300",
+    "type": "color",
+    "value": "#e0d5c4",
+    "description": null
+  },
+  {
+    "path": "color.ivory.400",
+    "name": "--sutra-color-ivory-400",
+    "type": "color",
+    "value": "#cbbfae",
+    "description": null
+  },
+  {
+    "path": "color.ink.700",
+    "name": "--sutra-color-ink-700",
+    "type": "color",
+    "value": "#2a2430",
+    "description": null
+  },
+  {
+    "path": "color.ink.800",
+    "name": "--sutra-color-ink-800",
+    "type": "color",
+    "value": "#1b1822",
+    "description": null
+  },
+  {
+    "path": "color.ink.900",
+    "name": "--sutra-color-ink-900",
+    "type": "color",
+    "value": "#16141c",
+    "description": null
+  },
+  {
+    "path": "color.ink.950",
+    "name": "--sutra-color-ink-950",
+    "type": "color",
+    "value": "#100e14",
+    "description": null
+  },
+  {
+    "path": "color.gold.300",
+    "name": "--sutra-color-gold-300",
+    "type": "color",
+    "value": "#e2cfab",
+    "description": null
+  },
+  {
+    "path": "color.gold.500",
+    "name": "--sutra-color-gold-500",
+    "type": "color",
+    "value": "#c4b49a",
+    "description": null
+  },
+  {
+    "path": "color.gold.700",
+    "name": "--sutra-color-gold-700",
+    "type": "color",
+    "value": "#8a7350",
+    "description": null
+  },
+  {
+    "path": "color.gold.800",
+    "name": "--sutra-color-gold-800",
+    "type": "color",
+    "value": "#6e5424",
+    "description": null
+  },
+  {
+    "path": "color.oxblood.300",
+    "name": "--sutra-color-oxblood-300",
+    "type": "color",
+    "value": "#e4b2aa",
+    "description": null
+  },
+  {
+    "path": "color.oxblood.500",
+    "name": "--sutra-color-oxblood-500",
+    "type": "color",
+    "value": "#8a3a34",
+    "description": null
+  },
+  {
+    "path": "color.oxblood.700",
+    "name": "--sutra-color-oxblood-700",
+    "type": "color",
+    "value": "#6e2c28",
+    "description": null
+  },
+  {
+    "path": "color.oxblood.800",
+    "name": "--sutra-color-oxblood-800",
+    "type": "color",
+    "value": "#5a2420",
+    "description": null
+  },
+  {
+    "path": "color.emerald.300",
+    "name": "--sutra-color-emerald-300",
+    "type": "color",
+    "value": "#b7d4cc",
+    "description": null
+  },
+  {
+    "path": "color.emerald.500",
+    "name": "--sutra-color-emerald-500",
+    "type": "color",
+    "value": "#3d6b62",
+    "description": null
+  },
+  {
+    "path": "color.emerald.700",
+    "name": "--sutra-color-emerald-700",
+    "type": "color",
+    "value": "#1a4540",
+    "description": null
+  },
+  {
+    "path": "color.emerald.800",
+    "name": "--sutra-color-emerald-800",
+    "type": "color",
+    "value": "#1a4a38",
+    "description": null
+  },
+  {
+    "path": "color.indigo.100",
+    "name": "--sutra-color-indigo-100",
+    "type": "color",
+    "value": "#e8e6f0",
+    "description": null
+  },
+  {
+    "path": "color.indigo.300",
+    "name": "--sutra-color-indigo-300",
+    "type": "color",
+    "value": "#d4d0e4",
+    "description": null
+  },
+  {
+    "path": "color.indigo.700",
+    "name": "--sutra-color-indigo-700",
+    "type": "color",
+    "value": "#2c2a4a",
+    "description": null
+  },
+  {
+    "path": "color.indigo.900",
+    "name": "--sutra-color-indigo-900",
+    "type": "color",
+    "value": "#1c1a2a",
+    "description": null
+  },
+  {
+    "path": "color.white",
+    "name": "--sutra-color-white",
+    "type": "color",
+    "value": "#ffffff",
+    "description": null
+  },
+  {
+    "path": "color.black",
+    "name": "--sutra-color-black",
+    "type": "color",
+    "value": "#000000",
+    "description": null
+  },
+  {
+    "path": "color.bg.canvas",
+    "name": "--sutra-color-bg-canvas",
+    "type": "color",
+    "value": "#f4efe6",
+    "description": null
+  },
+  {
+    "path": "color.bg.surface",
+    "name": "--sutra-color-bg-surface",
+    "type": "color",
+    "value": "#fbf8f3",
+    "description": null
+  },
+  {
+    "path": "color.bg.subtle",
+    "name": "--sutra-color-bg-subtle",
+    "type": "color",
+    "value": "#ebe4d6",
+    "description": null
+  },
+  {
+    "path": "color.bg.sunken",
+    "name": "--sutra-color-bg-sunken",
+    "type": "color",
+    "value": "#e0d5c4",
+    "description": null
+  },
+  {
+    "path": "color.bg.inverse",
+    "name": "--sutra-color-bg-inverse",
+    "type": "color",
+    "value": "#16141c",
+    "description": null
+  },
+  {
+    "path": "color.bg.primary",
+    "name": "--sutra-color-bg-primary",
+    "type": "color",
+    "value": "#16141c",
+    "description": null
+  },
+  {
+    "path": "color.bg.primary-hover",
+    "name": "--sutra-color-bg-primary-hover",
+    "type": "color",
+    "value": "#2a2430",
+    "description": null
+  },
+  {
+    "path": "color.bg.primary-subtle",
+    "name": "--sutra-color-bg-primary-subtle",
+    "type": "color",
+    "value": "#e5eeea",
+    "description": null
+  },
+  {
+    "path": "color.bg.accent",
+    "name": "--sutra-color-bg-accent",
+    "type": "color",
+    "value": "#6e2c28",
+    "description": null
+  },
+  {
+    "path": "color.bg.accent-hover",
+    "name": "--sutra-color-bg-accent-hover",
+    "type": "color",
+    "value": "#5a2420",
+    "description": null
+  },
+  {
+    "path": "color.bg.accent-subtle",
+    "name": "--sutra-color-bg-accent-subtle",
+    "type": "color",
+    "value": "#f3e4e1",
+    "description": null
+  },
+  {
+    "path": "color.bg.danger",
+    "name": "--sutra-color-bg-danger",
+    "type": "color",
+    "value": "#6e2c28",
+    "description": null
+  },
+  {
+    "path": "color.bg.danger-hover",
+    "name": "--sutra-color-bg-danger-hover",
+    "type": "color",
+    "value": "#5a2420",
+    "description": null
+  },
+  {
+    "path": "color.bg.danger-subtle",
+    "name": "--sutra-color-bg-danger-subtle",
+    "type": "color",
+    "value": "#f6e4e2",
+    "description": null
+  },
+  {
+    "path": "color.bg.success",
+    "name": "--sutra-color-bg-success",
+    "type": "color",
+    "value": "#1a4a38",
+    "description": null
+  },
+  {
+    "path": "color.bg.success-subtle",
+    "name": "--sutra-color-bg-success-subtle",
+    "type": "color",
+    "value": "#e4efe8",
+    "description": null
+  },
+  {
+    "path": "color.bg.warning-subtle",
+    "name": "--sutra-color-bg-warning-subtle",
+    "type": "color",
+    "value": "#f3ead6",
+    "description": null
+  },
+  {
+    "path": "color.bg.info-subtle",
+    "name": "--sutra-color-bg-info-subtle",
+    "type": "color",
+    "value": "#e8e6f0",
+    "description": null
+  },
+  {
+    "path": "color.fg.default",
+    "name": "--sutra-color-fg-default",
+    "type": "color",
+    "value": "#16141c",
+    "description": null
+  },
+  {
+    "path": "color.fg.muted",
+    "name": "--sutra-color-fg-muted",
+    "type": "color",
+    "value": "#5c5348",
+    "description": null
+  },
+  {
+    "path": "color.fg.on-primary",
+    "name": "--sutra-color-fg-on-primary",
+    "type": "color",
+    "value": "#fbf8f3",
+    "description": null
+  },
+  {
+    "path": "color.fg.on-accent",
+    "name": "--sutra-color-fg-on-accent",
+    "type": "color",
+    "value": "#fbf8f3",
+    "description": null
+  },
+  {
+    "path": "color.fg.on-danger",
+    "name": "--sutra-color-fg-on-danger",
+    "type": "color",
+    "value": "#fbf8f3",
+    "description": null
+  },
+  {
+    "path": "color.fg.on-success",
+    "name": "--sutra-color-fg-on-success",
+    "type": "color",
+    "value": "#fbf8f3",
+    "description": null
+  },
+  {
+    "path": "color.fg.on-inverse",
+    "name": "--sutra-color-fg-on-inverse",
+    "type": "color",
+    "value": "#f4efe6",
+    "description": null
+  },
+  {
+    "path": "color.fg.link",
+    "name": "--sutra-color-fg-link",
+    "type": "color",
+    "value": "#1e4a44",
+    "description": null
+  },
+  {
+    "path": "color.fg.primary",
+    "name": "--sutra-color-fg-primary",
+    "type": "color",
+    "value": "#1a4540",
+    "description": null
+  },
+  {
+    "path": "color.fg.accent",
+    "name": "--sutra-color-fg-accent",
+    "type": "color",
+    "value": "#6e2c28",
+    "description": null
+  },
+  {
+    "path": "color.fg.danger",
+    "name": "--sutra-color-fg-danger",
+    "type": "color",
+    "value": "#6e2c28",
+    "description": null
+  },
+  {
+    "path": "color.fg.success",
+    "name": "--sutra-color-fg-success",
+    "type": "color",
+    "value": "#1a4a38",
+    "description": null
+  },
+  {
+    "path": "color.fg.warning",
+    "name": "--sutra-color-fg-warning",
+    "type": "color",
+    "value": "#6e5424",
+    "description": null
+  },
+  {
+    "path": "color.fg.info",
+    "name": "--sutra-color-fg-info",
+    "type": "color",
+    "value": "#2c2a4a",
+    "description": null
+  },
+  {
+    "path": "color.border.default",
+    "name": "--sutra-color-border-default",
+    "type": "color",
+    "value": "#8a7350",
+    "description": null
+  },
+  {
+    "path": "color.border.strong",
+    "name": "--sutra-color-border-strong",
+    "type": "color",
+    "value": "#5c5348",
+    "description": null
+  },
+  {
+    "path": "color.border.primary",
+    "name": "--sutra-color-border-primary",
+    "type": "color",
+    "value": "#1a4540",
+    "description": null
+  },
+  {
+    "path": "color.focus.ring",
+    "name": "--sutra-color-focus-ring",
+    "type": "color",
+    "value": "#6e2c28",
+    "description": null
+  },
+  {
+    "path": "color.thread.start",
+    "name": "--sutra-color-thread-start",
+    "type": "color",
+    "value": "#8a7350",
+    "description": null
+  },
+  {
+    "path": "color.thread.end",
+    "name": "--sutra-color-thread-end",
+    "type": "color",
+    "value": "#1a4540",
+    "description": null
+  },
+  {
+    "path": "gradient.rule",
+    "name": "--sutra-gradient-rule",
+    "type": "other",
+    "value": "linear-gradient(90deg, transparent, #8a7350 18%, #8a7350 82%, transparent)",
+    "description": null
+  },
+  {
+    "path": "gradient.veil",
+    "name": "--sutra-gradient-veil",
+    "type": "other",
+    "value": "radial-gradient(680px 320px at 100% 0%, rgba(138, 115, 80, 0.16), transparent 62%)",
+    "description": null
+  },
+  {
+    "path": "pattern.kalamkari",
+    "name": "--sutra-pattern-kalamkari",
+    "type": "other",
+    "value": "repeating-linear-gradient(90deg, transparent 0 23px, rgba(138, 115, 80, 0.45) 23px 24px), repeating-linear-gradient(0deg, transparent 0 23px, rgba(138, 115, 80, 0.45) 23px 24px)",
+    "description": "Fine line grid, used as a margin ornament. Keep it off body text."
+  },
+  {
+    "path": "pattern.blockprint",
+    "name": "--sutra-pattern-blockprint",
+    "type": "other",
+    "value": "repeating-linear-gradient(135deg, transparent 0 15px, rgba(110, 44, 40, 0.28) 15px 16px)",
+    "description": "A single hairline repeat, like a block-print edge."
+  },
+  {
+    "path": "shadow.sm",
+    "name": "--sutra-shadow-sm",
+    "type": "shadow",
+    "value": "0px 1px 1px 0px rgba(22, 20, 28, 0.05), 0px 8px 20px 0px rgba(22, 20, 28, 0.04)",
+    "description": null
+  },
+  {
+    "path": "shadow.md",
+    "name": "--sutra-shadow-md",
+    "type": "shadow",
+    "value": "0px 1px 2px 0px rgba(22, 20, 28, 0.05), 0px 16px 40px 0px rgba(22, 20, 28, 0.06)",
+    "description": null
+  },
+  {
+    "path": "shadow.lg",
+    "name": "--sutra-shadow-lg",
+    "type": "shadow",
+    "value": "0px 2px 4px 0px rgba(22, 20, 28, 0.04), 0px 28px 64px 0px rgba(22, 20, 28, 0.08)",
+    "description": null
+  },
+  {
+    "path": "font.family.sans",
+    "name": "--sutra-font-family-sans",
+    "type": "fontFamily",
+    "value": "Inter, \"Noto Sans Devanagari\", \"Nirmala UI\", Mangal, sans-serif",
+    "description": "Body text uses Inter. Devanagari falls through to Noto Sans Devanagari, then Nirmala UI and Mangal. All webfonts are SIL Open Font License."
+  },
+  {
+    "path": "font.family.display",
+    "name": "--sutra-font-family-display",
+    "type": "fontFamily",
+    "value": "Fraunces, \"Noto Sans Devanagari\", \"Iowan Old Style\", Palatino, serif",
+    "description": "Fraunces for editorial display. Devanagari falls through to Noto Sans Devanagari. Both are SIL Open Font License."
+  },
+  {
+    "path": "font.family.mono",
+    "name": "--sutra-font-family-mono",
+    "type": "fontFamily",
+    "value": "\"IBM Plex Mono\", \"Noto Sans Mono\", ui-monospace, monospace",
+    "description": "IBM Plex Mono for figures and code, with Noto Sans Mono as the OFL fallback."
+  },
+  {
+    "path": "font.weight.regular",
+    "name": "--sutra-font-weight-regular",
+    "type": "fontWeight",
+    "value": "400",
+    "description": null
+  },
+  {
+    "path": "font.weight.medium",
+    "name": "--sutra-font-weight-medium",
+    "type": "fontWeight",
+    "value": "500",
+    "description": null
+  },
+  {
+    "path": "font.weight.semibold",
+    "name": "--sutra-font-weight-semibold",
+    "type": "fontWeight",
+    "value": "600",
+    "description": null
+  },
+  {
+    "path": "font.weight.bold",
+    "name": "--sutra-font-weight-bold",
+    "type": "fontWeight",
+    "value": "700",
+    "description": null
+  },
+  {
+    "path": "font.size.xs",
+    "name": "--sutra-font-size-xs",
+    "type": "dimension",
+    "value": "0.75rem",
+    "description": null
+  },
+  {
+    "path": "font.size.sm",
+    "name": "--sutra-font-size-sm",
+    "type": "dimension",
+    "value": "0.875rem",
+    "description": null
+  },
+  {
+    "path": "font.size.md",
+    "name": "--sutra-font-size-md",
+    "type": "dimension",
+    "value": "1rem",
+    "description": null
+  },
+  {
+    "path": "font.size.lg",
+    "name": "--sutra-font-size-lg",
+    "type": "dimension",
+    "value": "1.125rem",
+    "description": null
+  },
+  {
+    "path": "font.size.xl",
+    "name": "--sutra-font-size-xl",
+    "type": "dimension",
+    "value": "1.375rem",
+    "description": null
+  },
+  {
+    "path": "font.size.2xl",
+    "name": "--sutra-font-size-2xl",
+    "type": "dimension",
+    "value": "1.75rem",
+    "description": null
+  },
+  {
+    "path": "font.size.3xl",
+    "name": "--sutra-font-size-3xl",
+    "type": "dimension",
+    "value": "2.25rem",
+    "description": null
+  },
+  {
+    "path": "font.size.4xl",
+    "name": "--sutra-font-size-4xl",
+    "type": "dimension",
+    "value": "3.25rem",
+    "description": null
+  },
+  {
+    "path": "font.size.display",
+    "name": "--sutra-font-size-display",
+    "type": "dimension",
+    "value": "4.5rem",
+    "description": null
+  },
+  {
+    "path": "font.line.xs",
+    "name": "--sutra-font-line-xs",
+    "type": "dimension",
+    "value": "1.125rem",
+    "description": null
+  },
+  {
+    "path": "font.line.sm",
+    "name": "--sutra-font-line-sm",
+    "type": "dimension",
+    "value": "1.375rem",
+    "description": null
+  },
+  {
+    "path": "font.line.md",
+    "name": "--sutra-font-line-md",
+    "type": "dimension",
+    "value": "1.55rem",
+    "description": null
+  },
+  {
+    "path": "font.line.lg",
+    "name": "--sutra-font-line-lg",
+    "type": "dimension",
+    "value": "1.7rem",
+    "description": null
+  },
+  {
+    "path": "font.line.xl",
+    "name": "--sutra-font-line-xl",
+    "type": "dimension",
+    "value": "1.8rem",
+    "description": null
+  },
+  {
+    "path": "font.line.2xl",
+    "name": "--sutra-font-line-2xl",
+    "type": "dimension",
+    "value": "2.15rem",
+    "description": null
+  },
+  {
+    "path": "font.line.3xl",
+    "name": "--sutra-font-line-3xl",
+    "type": "dimension",
+    "value": "2.7rem",
+    "description": null
+  },
+  {
+    "path": "font.line.4xl",
+    "name": "--sutra-font-line-4xl",
+    "type": "dimension",
+    "value": "3.6rem",
+    "description": null
+  },
+  {
+    "path": "font.line.display",
+    "name": "--sutra-font-line-display",
+    "type": "dimension",
+    "value": "4.9rem",
+    "description": null
+  },
+  {
+    "path": "space.0",
+    "name": "--sutra-space-0",
+    "type": "dimension",
+    "value": "0px",
+    "description": null
+  },
+  {
+    "path": "space.1",
+    "name": "--sutra-space-1",
+    "type": "dimension",
+    "value": "4px",
+    "description": null
+  },
+  {
+    "path": "space.2",
+    "name": "--sutra-space-2",
+    "type": "dimension",
+    "value": "8px",
+    "description": null
+  },
+  {
+    "path": "space.3",
+    "name": "--sutra-space-3",
+    "type": "dimension",
+    "value": "12px",
+    "description": null
+  },
+  {
+    "path": "space.4",
+    "name": "--sutra-space-4",
+    "type": "dimension",
+    "value": "16px",
+    "description": null
+  },
+  {
+    "path": "space.5",
+    "name": "--sutra-space-5",
+    "type": "dimension",
+    "value": "20px",
+    "description": null
+  },
+  {
+    "path": "space.6",
+    "name": "--sutra-space-6",
+    "type": "dimension",
+    "value": "24px",
+    "description": null
+  },
+  {
+    "path": "space.8",
+    "name": "--sutra-space-8",
+    "type": "dimension",
+    "value": "32px",
+    "description": null
+  },
+  {
+    "path": "space.10",
+    "name": "--sutra-space-10",
+    "type": "dimension",
+    "value": "40px",
+    "description": null
+  },
+  {
+    "path": "space.12",
+    "name": "--sutra-space-12",
+    "type": "dimension",
+    "value": "48px",
+    "description": null
+  },
+  {
+    "path": "space.16",
+    "name": "--sutra-space-16",
+    "type": "dimension",
+    "value": "64px",
+    "description": null
+  },
+  {
+    "path": "space.20",
+    "name": "--sutra-space-20",
+    "type": "dimension",
+    "value": "80px",
+    "description": null
+  },
+  {
+    "path": "radius.none",
+    "name": "--sutra-radius-none",
+    "type": "dimension",
+    "value": "0px",
+    "description": null
+  },
+  {
+    "path": "radius.sm",
+    "name": "--sutra-radius-sm",
+    "type": "dimension",
+    "value": "2px",
+    "description": null
+  },
+  {
+    "path": "radius.md",
+    "name": "--sutra-radius-md",
+    "type": "dimension",
+    "value": "4px",
+    "description": null
+  },
+  {
+    "path": "radius.lg",
+    "name": "--sutra-radius-lg",
+    "type": "dimension",
+    "value": "8px",
+    "description": null
+  },
+  {
+    "path": "radius.xl",
+    "name": "--sutra-radius-xl",
+    "type": "dimension",
+    "value": "12px",
+    "description": null
+  },
+  {
+    "path": "radius.full",
+    "name": "--sutra-radius-full",
+    "type": "dimension",
+    "value": "999px",
+    "description": null
+  },
+  {
+    "path": "motion.duration.fast",
+    "name": "--sutra-motion-duration-fast",
+    "type": "duration",
+    "value": "180ms",
+    "description": null
+  },
+  {
+    "path": "motion.duration.normal",
+    "name": "--sutra-motion-duration-normal",
+    "type": "duration",
+    "value": "420ms",
+    "description": null
+  },
+  {
+    "path": "motion.duration.slow",
+    "name": "--sutra-motion-duration-slow",
+    "type": "duration",
+    "value": "780ms",
+    "description": null
+  },
+  {
+    "path": "motion.easing.standard",
+    "name": "--sutra-motion-easing-standard",
+    "type": "cubicBezier",
+    "value": "cubic-bezier(0.22, 1, 0.36, 1)",
+    "description": null
+  },
+  {
+    "path": "motion.easing.emphasis",
+    "name": "--sutra-motion-easing-emphasis",
+    "type": "cubicBezier",
+    "value": "cubic-bezier(0.65, 0, 0.35, 1)",
+    "description": null
+  }
+]

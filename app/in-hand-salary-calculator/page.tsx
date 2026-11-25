@@ -1,6 +1,7 @@
 import Link from "next/link";
+import { BilingualFaq } from "@/components/BilingualFaq";
 import { JsonLd } from "@/components/JsonLd";
-import { Crumbs, Faq, Related } from "@/components/Related";
+import { PageShell } from "@/components/PageShell";
 import { SalaryCalculator } from "@/components/SalaryCalculator";
 import { breadcrumbSchema, faqSchema, pageMeta, softwareSchema } from "@/lib/seo";
 
@@ -58,17 +59,19 @@ export const metadata = pageMeta({
 
 export default function SalaryPage() {
   return (
-    <>
+    <PageShell
+      title="In-hand salary calculator"
+      description="Split a CTC into basic, HRA, special allowance, both legs of PF and gratuity, then take off professional tax and income tax. The headline number is the new regime. The old regime is beside it."
+      breadcrumb={[
+        { href: "/", label: "Home" },
+        { href: "/in-hand-salary-calculator/", label: "In-hand salary calculator" },
+      ]}
+      current="/in-hand-salary-calculator/"
+    >
       <JsonLd data={softwareSchema({ path: "/in-hand-salary-calculator/", name: title, description })} />
       <JsonLd data={faqSchema(faqs)} />
       <JsonLd data={breadcrumbSchema([{ name: "Home", path: "/" }, { name: "In-hand salary calculator", path: "/in-hand-salary-calculator/" }])} />
-      <Crumbs items={[{ href: "/", label: "Home" }, { href: "/in-hand-salary-calculator/", label: "In-hand salary calculator" }]} />
-      <p className="eyebrow">CTC to monthly take-home</p>
-      <h1>In-hand salary calculator</h1>
-      <p className="lede">
-        Split a CTC into basic, HRA, special allowance, both legs of PF and gratuity, then take off
-        professional tax and income tax. The headline number is the new regime. The old regime is beside it.
-      </p>
+      <p className="kicker">CTC to monthly take-home</p>
       <SalaryCalculator />
       <section className="prose">
         <h2>How the CTC is split</h2>
@@ -90,9 +93,7 @@ export default function SalaryPage() {
           professional tax is higher. The note under the table says so.
         </p>
       </section>
-      <Faq id="salary-faq" title="Questions" items={faqs} />
-      <Faq id="salary-faq-hi" title="हिंदी में सवाल" items={hindi} />
-      <Related current="/in-hand-salary-calculator/" />
-    </>
+      <BilingualFaq id="salary-faq" title="Questions" items={faqs} hiId="salary-faq-hi" hiTitle="हिंदी में सवाल" hiItems={hindi} />
+    </PageShell>
   );
 }

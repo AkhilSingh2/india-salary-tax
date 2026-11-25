@@ -1,3 +1,4 @@
+import { ComparisonTable } from "@sutra-ui/react";
 import { formatINR, formatPercent } from "@/lib/money";
 import { YEARS, type Slab, type TaxYearId } from "@/lib/tax-rules";
 
@@ -12,30 +13,22 @@ function label(slabs: Slab[], index: number): string {
 
 export function SlabTable({ slabs, caption }: { slabs: Slab[]; caption: string }) {
   return (
-    <table>
-      <caption style={{ textAlign: "left", fontWeight: 700, padding: "0.4rem 0" }}>{caption}</caption>
-      <thead>
-        <tr>
-          <th scope="col">Total income</th>
-          <th scope="col">Rate</th>
-        </tr>
-      </thead>
-      <tbody>
-        {slabs.map((slab, index) => (
-          <tr key={`${slab.rate}-${slab.upto ?? "top"}`}>
-            <td>{label(slabs, index)}</td>
-            <td>{slab.rate === 0 ? "Nil" : formatPercent(slab.rate)}</td>
-          </tr>
-        ))}
-      </tbody>
-    </table>
+    <ComparisonTable
+      caption={caption}
+      rowHeader="Total income"
+      columns={[{ key: "rate", header: "Rate" }]}
+      rows={slabs.map((slab, index) => ({
+        label: label(slabs, index),
+        values: { rate: slab.rate === 0 ? "Nil" : formatPercent(slab.rate) },
+      }))}
+    />
   );
 }
 
 export function YearSlabs({ year }: { year: TaxYearId }) {
   const rules = YEARS[year];
   return (
-    <div>
+    <div className="stack">
       <SlabTable slabs={rules.newRegime.slabs} caption={`New regime, ${rules.shortLabel}`} />
       <SlabTable slabs={rules.oldRegime.slabsByAge.below60} caption="Old regime, under 60" />
       <SlabTable slabs={rules.oldRegime.slabsByAge.senior} caption="Old regime, 60 to 79" />

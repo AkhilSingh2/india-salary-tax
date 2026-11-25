@@ -1,6 +1,7 @@
 import Link from "next/link";
+import { BilingualFaq } from "@/components/BilingualFaq";
 import { JsonLd } from "@/components/JsonLd";
-import { Crumbs, Faq, Related } from "@/components/Related";
+import { PageShell } from "@/components/PageShell";
 import { YearSlabs } from "@/components/SlabReference";
 import { TaxCalculator } from "@/components/TaxCalculator";
 import { breadcrumbSchema, faqSchema, pageMeta, softwareSchema } from "@/lib/seo";
@@ -70,17 +71,19 @@ export const metadata = pageMeta({
 
 export default function IncomeTaxPage() {
   return (
-    <>
+    <PageShell
+      title="Income tax calculator"
+      description="Old regime and new regime, side by side, for a salaried resident. The new regime is the default for FY 2025-26 / AY 2026-27. Switch the year if you are checking AY 2025-26."
+      breadcrumb={[
+        { href: "/", label: "Home" },
+        { href: "/income-tax-calculator/", label: "Income tax calculator" },
+      ]}
+      current="/income-tax-calculator/"
+    >
       <JsonLd data={softwareSchema({ path: "/income-tax-calculator/", name: title, description })} />
       <JsonLd data={faqSchema(faqs)} />
       <JsonLd data={breadcrumbSchema([{ name: "Home", path: "/" }, { name: "Income tax calculator", path: "/income-tax-calculator/" }])} />
-      <Crumbs items={[{ href: "/", label: "Home" }, { href: "/income-tax-calculator/", label: "Income tax calculator" }]} />
-      <p className="eyebrow">FY 2025-26 · AY 2026-27 · also AY 2025-26</p>
-      <h1>Income tax calculator</h1>
-      <p className="lede">
-        Old regime and new regime, side by side, for a salaried resident. The new regime is the default
-        for FY 2025-26 / AY 2026-27. Switch the year if you are checking AY 2025-26.
-      </p>
+      <p className="kicker">FY 2025-26 · AY 2026-27 · also AY 2025-26</p>
       <noscript>
         <p>The working below needs JavaScript. The slab tables further down are still readable.</p>
       </noscript>
@@ -118,9 +121,7 @@ export default function IncomeTaxPage() {
           ))}
         </ul>
       </section>
-      <Faq id="tax-faq" title="Questions" items={faqs} />
-      <Faq id="tax-faq-hi" title="हिंदी में सवाल" items={hindi} />
-      <Related current="/income-tax-calculator/" />
-    </>
+      <BilingualFaq id="tax-faq" title="Questions" items={faqs} hiId="tax-faq-hi" hiTitle="हिंदी में सवाल" hiItems={hindi} />
+    </PageShell>
   );
 }

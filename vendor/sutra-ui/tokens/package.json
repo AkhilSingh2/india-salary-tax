@@ -1,0 +1,28 @@
+{
+  "name": "@sutra-ui/tokens",
+  "version": "0.1.0",
+  "description": "Vendored build of Sutra UI design tokens. CSS variables and the Tailwind preset.",
+  "license": "MIT",
+  "type": "module",
+  "sideEffects": ["**/*.css"],
+  "files": ["dist"],
+  "exports": {
+    "./css": "./dist/sutra.css",
+    "./tailwind-preset": {
+      "require": "./dist/tailwind-preset.cjs",
+      "import": "./dist/tailwind-preset.js",
+      "default": "./dist/tailwind-preset.js"
+    },
+    "./meta": "./dist/meta.json",
+    "./tokens/light": "./dist/light.json",
+    "./tokens/dark": "./dist/dark.json",
+    "./tokens/high-contrast": "./dist/high-contrast.json",
+    "./package.json": "./package.json"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AkhilSingh2/sutra-ui.git",
+    "directory": "packages/tokens"
+  },
+  "homepage": "https://akhilsingh2.github.io/sutra-ui/"
+}
